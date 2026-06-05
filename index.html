@@ -1,0 +1,3637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LF Heart Health Kitchen — MyNetDiary Recipe Import</title>
+  <style>
+    body{font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px;color:#222;background:#fafafa}
+    h1{color:#1F4E79;border-bottom:3px solid #2E74B5;padding-bottom:10px}
+    h2.section-heading{color:#375623;margin-top:40px;border-bottom:2px solid #375623;padding-bottom:6px}
+    .recipe{background:#fff;border:1px solid #ddd;border-radius:6px;padding:24px;margin:24px 0}
+    .recipe-title{color:#1F4E79;margin-top:0;font-size:1.3em}
+    .recipe-meta{color:#2E74B5;font-style:italic;margin-top:-6px;font-size:0.9em}
+    .recipe-body{display:flex;gap:32px;flex-wrap:wrap;margin-top:16px}
+    .ingredients-block{flex:1;min-width:240px}
+    .instructions-block{flex:2;min-width:280px}
+    h3{color:#375623;font-size:0.85em;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+    .ingredients{margin:0;padding-left:18px}
+    .ingredients li{margin-bottom:3px;font-size:0.92em;line-height:1.5}
+    .steps{margin:0;padding-left:18px}
+    .steps li{margin-bottom:6px;font-size:0.92em;line-height:1.6}
+    .nutrition{background:#E2EFDA;border-radius:4px;padding:9px 14px;margin-top:12px;font-size:0.87em}
+    .servings-meta{font-size:0.82em;color:#666;margin:4px 0 0}
+    .sauce{border-left:4px solid #375623}
+    nav{background:#fff;border:1px solid #ddd;border-radius:6px;padding:20px;margin-bottom:28px}
+    nav h2{color:#1F4E79;margin-top:0;font-size:1.1em}
+    nav ul{padding-left:20px}
+    nav ul ul{column-count:2;column-gap:16px;padding-left:16px}
+    nav a{color:#2E74B5;text-decoration:none;font-size:0.85em}
+    nav a:hover{text-decoration:underline}
+    .import-note{background:#FFF9E6;border:2px solid #BF8F00;border-radius:6px;padding:14px 18px;margin-bottom:24px;font-size:0.9em}
+    .import-note strong{color:#BF8F00}
+    code{background:#f4f4f4;padding:2px 5px;border-radius:3px;font-size:0.88em}
+    @media(max-width:600px){.recipe-body{flex-direction:column}nav ul ul{column-count:1}}
+  </style>
+</head>
+<body>
+
+<h1>LF Heart Health Kitchen</h1>
+<p>Personal cookbook recipes — 70 main recipes + 22 sauces and dressings.<br>
+Prepared by AR, 2026. All ingredients in grams (solids) and ml (liquids).</p>
+
+<div class="import-note">
+  <strong>MyNetDiary Import Instructions:</strong><br>
+  1. In MyNetDiary app or web: go to <strong>My Foods &rarr; Recipes &rarr; Import Recipe</strong><br>
+  2. Paste the full URL for this page plus the recipe anchor — for example:<br>
+  &nbsp;&nbsp;&nbsp;<code>https://YOURUSERNAME.github.io/lf-recipes/#recipe-1</code><br>
+  3. Click <strong>Import</strong>. MyNetDiary will read the ingredients automatically.<br>
+  4. Review the ingredient matches, set servings to 1, then click <strong>Save to My Foods</strong>.<br>
+  5. To share with LF: tap the recipe &rarr; three dots &rarr; Share &rarr; Share Recipe Link &rarr; send her the link via MyNetDiary chat.
+</div>
+
+<nav>
+  <h2>Table of Contents — Main Recipes</h2>
+  <ul>
+    <li><strong>Section 1 — Quick Proteins</strong><ul>
+      <li><a href="#recipe-1">Recipe 1: Pan-Fried Tofu with Garlic and Smoked Paprika</a></li>
+      <li><a href="#recipe-2">Recipe 2: Egg Foo Young with Brown Gravy</a></li>
+      <li><a href="#recipe-3">Recipe 3: Tofu Scramble with Spinach and Cherry Tomato</a></li>
+      <li><a href="#recipe-4">Recipe 4: Soy Curl Chik-Style Strips</a></li>
+      <li><a href="#recipe-5">Recipe 5: Fried Eggs over Jasmine Rice with Bragg Drizzle</a></li>
+      <li><a href="#recipe-6">Recipe 6: Ground Turkey and Zucchini Skillet</a></li>
+      <li><a href="#recipe-7">Recipe 7: Ground Chicken Lettuce Cups with Ginger</a></li>
+      <li><a href="#recipe-8">Recipe 8: Quorn and Vegetable Stir-Fry</a></li>
+      <li><a href="#recipe-9">Recipe 9: Simple Baked Tofu</a></li>
+      <li><a href="#recipe-10">Recipe 10: Simple Ground Turkey Egg Scramble</a></li>
+    </ul></li>
+    <li><strong>Section 2 — Rice and Grain Bowls</strong><ul>
+      <li><a href="#recipe-11">Recipe 11: Soy Curl Fajita Bowl</a></li>
+      <li><a href="#recipe-12">Recipe 12: Chipotle-Style Chicken Burrito Bowl</a></li>
+      <li><a href="#recipe-13">Recipe 13: Ground Turkey Taco Rice Bowl</a></li>
+      <li><a href="#recipe-14">Recipe 14: Simple Fried Rice with Egg and Frozen Vegetables</a></li>
+      <li><a href="#recipe-15">Recipe 15: Korean-Inspired Tofu Rice Bowl</a></li>
+      <li><a href="#recipe-16">Recipe 16: Mediterranean Chickpea Bowl</a></li>
+      <li><a href="#recipe-17">Recipe 17: Teriyaki Soy Curl Bowl</a></li>
+      <li><a href="#recipe-18">Recipe 18: Black Bean and Rice Bowl with Avocado</a></li>
+      <li><a href="#recipe-19">Recipe 19: Spanish Rice</a></li>
+      <li><a href="#recipe-20">Recipe 20: Chipotle-Style Cilantro Lime Rice</a></li>
+    </ul></li>
+    <li><strong>Section 3 — Wraps and Sandwiches</strong><ul>
+      <li><a href="#recipe-21">Recipe 21: Soy Curl Fajita Burrito Wrap</a></li>
+      <li><a href="#recipe-22">Recipe 22: Ground Turkey Burrito</a></li>
+      <li><a href="#recipe-23">Recipe 23: Simple Chicken and Avocado Wrap</a></li>
+      <li><a href="#recipe-24">Recipe 24: Tofu and Vegetable Quesadilla</a></li>
+      <li><a href="#recipe-25">Recipe 25: Egg and Avocado Breakfast Wrap</a></li>
+      <li><a href="#recipe-26">Recipe 26: Chickpea Smash Sandwich</a></li>
+      <li><a href="#recipe-27">Recipe 27: Tofu Egg-Style Sandwich</a></li>
+      <li><a href="#recipe-28">Recipe 28: Simple Black Bean Quesadilla</a></li>
+      <li><a href="#recipe-29">Recipe 29: Chicken and Mung Bean Sprout Wrap</a></li>
+      <li><a href="#recipe-30">Recipe 30: Warm Vegetable and Hummus Wrap</a></li>
+    </ul></li>
+    <li><strong>Section 4 — Soups and Stews</strong><ul>
+      <li><a href="#recipe-31">Recipe 31: Instant Pot Vegetable Lentil Soup</a></li>
+      <li><a href="#recipe-32">Recipe 32: Instant Pot Black Bean and Corn Stew</a></li>
+      <li><a href="#recipe-33">Recipe 33: Simple Chickpea Tomato Soup</a></li>
+      <li><a href="#recipe-34">Recipe 34: Instant Pot Soy Curl Noodle Soup</a></li>
+      <li><a href="#recipe-35">Recipe 35: Simple Zucchini and White Bean Soup</a></li>
+      <li><a href="#recipe-36">Recipe 36: Instant Pot Pinto Bean Soup</a></li>
+      <li><a href="#recipe-37">Recipe 37: Simple Tomato Basil Lentil Soup</a></li>
+      <li><a href="#recipe-38">Recipe 38: Simple Vegetable Miso Broth Bowl</a></li>
+      <li><a href="#recipe-39">Recipe 39: Ground Turkey and Vegetable Soup</a></li>
+      <li><a href="#recipe-40">Recipe 40: Instant Pot Corn and Potato Chowder</a></li>
+    </ul></li>
+    <li><strong>Section 5 — Pasta and Noodles</strong><ul>
+      <li><a href="#recipe-41">Recipe 41: Chickpea Pasta with Simple Tomato Sauce</a></li>
+      <li><a href="#recipe-42">Recipe 42: Chickpea Pasta with Avocado and Lemon</a></li>
+      <li><a href="#recipe-43">Recipe 43: Soy Curl Chow Mein Style Noodles</a></li>
+      <li><a href="#recipe-44">Recipe 44: Simple Rice Noodle Stir-Fry</a></li>
+      <li><a href="#recipe-45">Recipe 45: Chickpea Pasta with Peanut Butter Sauce</a></li>
+      <li><a href="#recipe-46">Recipe 46: Soy Curl Pad Thai Style Noodles</a></li>
+      <li><a href="#recipe-47">Recipe 47: Simple Garlic and Olive Oil Pasta</a></li>
+      <li><a href="#recipe-48">Recipe 48: Cold Sesame Noodle Bowl</a></li>
+      <li><a href="#recipe-49">Recipe 49: Ground Turkey Bolognese over Chickpea Pasta</a></li>
+      <li><a href="#recipe-50">Recipe 50: Chickpea Pasta with White Bean Cream Sauce</a></li>
+    </ul></li>
+    <li><strong>Section 6 — Fresh Salads and Cold Bowls</strong><ul>
+      <li><a href="#recipe-51">Recipe 51: Mung Bean Sprout and Cucumber Salad</a></li>
+      <li><a href="#recipe-52">Recipe 52: Simple Romaine Salad with Lemon Dressing</a></li>
+      <li><a href="#recipe-53">Recipe 53: Chickpea and Cherry Tomato Salad</a></li>
+      <li><a href="#recipe-54">Recipe 54: Cold Soy Curl Salad Bowl</a></li>
+      <li><a href="#recipe-55">Recipe 55: Avocado and Black Bean Salad</a></li>
+      <li><a href="#recipe-56">Recipe 56: Shredded Cabbage Slaw with Apple</a></li>
+      <li><a href="#recipe-57">Recipe 57: Rotisserie Chicken Salad with Avocado Mayo</a></li>
+      <li><a href="#recipe-58">Recipe 58: Cucumber, Tomato and Herb Salad</a></li>
+      <li><a href="#recipe-59">Recipe 59: Cold Sesame Noodle Salad</a></li>
+      <li><a href="#recipe-60">Recipe 60: Mediterranean White Bean Salad</a></li>
+    </ul></li>
+    <li><strong>Section 7 — Snacks and Desserts</strong><ul>
+      <li><a href="#recipe-61">Recipe 61: Peanut Butter and Apple Slices with Cinnamon</a></li>
+      <li><a href="#recipe-62">Recipe 62: Avocado Toast on Whole Wheat</a></li>
+      <li><a href="#recipe-63">Recipe 63: Oat and Peanut Butter Energy Bites</a></li>
+      <li><a href="#recipe-64">Recipe 64: Frozen Banana Nice Cream</a></li>
+      <li><a href="#recipe-65">Recipe 65: Avocado Chocolate Mousse</a></li>
+      <li><a href="#recipe-66">Recipe 66: Chia Pudding with Berry Topping</a></li>
+      <li><a href="#recipe-67">Recipe 67: Rice Cake with Almond Butter and Strawberries</a></li>
+      <li><a href="#recipe-68">Recipe 68: Simple Trail Mix</a></li>
+      <li><a href="#recipe-69">Recipe 69: Blended Fruit and Soy Milk Smoothie</a></li>
+      <li><a href="#recipe-70">Recipe 70: Warm Cinnamon Oat Bites</a></li>
+    </ul></li></ul>
+  <h2 style="margin-top:16px">Table of Contents — Sauces and Dressings</h2>
+  <ul><li><a href="#sauce-1">Sauce 1: Simple Lemon and Olive Oil Dressing</a></li>
+<li><a href="#sauce-2">Sauce 2: Tahini-Lemon Dressing</a></li>
+<li><a href="#sauce-3">Sauce 3: Sesame-Ginger Dressing</a></li>
+<li><a href="#sauce-4">Sauce 4: Creamy Avocado Dressing</a></li>
+<li><a href="#sauce-5">Sauce 5: Apple Cider Vinegar and Herb Dressing</a></li>
+<li><a href="#sauce-6">Sauce 6: Peanut Dressing</a></li>
+<li><a href="#sauce-7">Sauce 7: Simple Tomato Sauce</a></li>
+<li><a href="#sauce-8">Sauce 8: Ginger-Miso Citrus Sauce</a></li>
+<li><a href="#sauce-9">Sauce 9: Simple Brown Gravy</a></li>
+<li><a href="#sauce-10">Sauce 10: Simple White Cashew Cream Sauce</a></li>
+<li><a href="#sauce-11">Sauce 11: Guajillo-Style Mild Red Sauce</a></li>
+<li><a href="#sauce-12">Sauce 12: Simple Teriyaki Glaze</a></li>
+<li><a href="#sauce-13">Sauce 13: Peanut Dipping Sauce</a></li>
+<li><a href="#sauce-14">Sauce 14: Simple Chipotle-Style Sauce</a></li>
+<li><a href="#sauce-15">Sauce 15: Garlic and Herb Drizzle</a></li>
+<li><a href="#sauce-16">Sauce 16: Simple Salsa Fresca</a></li>
+<li><a href="#sauce-17">Sauce 17: Avocado Crema</a></li>
+<li><a href="#sauce-18">Sauce 18: Simple Aquafaba Mayo</a></li>
+<li><a href="#sauce-19">Sauce 19: Fajita Seasoning Blend</a></li>
+<li><a href="#sauce-20">Sauce 20: All-Purpose Salt-Free Herb Seasoning</a></li>
+<li><a href="#sauce-21">Sauce 21: Chik-Style Broth Blend</a></li>
+<li><a href="#sauce-22">Sauce 22: Warm Spice Blend for Soups and Stews</a></li></ul>
+</nav>
+
+
+  <section>
+    <h2 class="section-heading">Section 1 — Quick Proteins</h2>
+    
+<article id="recipe-1" class="recipe">
+  <h2 class="recipe-title">Recipe 1: Pan-Fried Tofu with Garlic and Smoked Paprika</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • No oven</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>350g extra firm tofu</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>3g garlic powder</li>
+        <li>3g smoked paprika</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>15ml light olive oil</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Press tofu 30 minutes. Pat completely dry with paper towels — dry tofu browns beautifully.</li>
+        <li>Mix Bragg, garlic powder, paprika, pepper, and salt in a small bowl. Brush onto both sides of each tofu slice.</li>
+        <li>Heat olive oil in a pan on medium-high. Add tofu in a single layer.</li>
+        <li>Cook 3 to 4 minutes without moving — let a golden crust form. Flip. Cook 2 to 3 more minutes.</li>
+        <li>Serve over rice or in a bowl with Ginger-Miso Citrus Sauce or Sesame-Ginger Dressing from the Sauce section.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~180 &nbsp;
+    Potassium: ~160mg &nbsp;
+    Sodium: ~290mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-2" class="recipe">
+  <h2 class="recipe-title">Recipe 2: Egg Foo Young with Brown Gravy</h2>
+  <p class="recipe-meta">Ready in 25 minutes • 1 pan • Comfort food any time of day</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>6 large eggs</li>
+        <li>120g mung bean sprouts</li>
+        <li>80g frozen peas and carrots mix</li>
+        <li>40g green onions</li>
+        <li>6g garlic</li>
+        <li>2g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>240ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>20ml Bragg Liquid Aminos</li>
+        <li>8g cornstarch</li>
+        <li>5g fresh ginger</li>
+        <li>2g garlic powder</li>
+        <li>3ml sesame oil</li>
+        <li>200g dry jasmine rice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Start jasmine rice in rice cooker. While rice cooks make the egg foo young.</li>
+        <li>In a large bowl beat all 6 eggs. Add sprouts, peas and carrots, green onions, garlic, salt, and pepper. Stir well.</li>
+        <li>Heat olive oil in a large pan on medium. Pour in about 1/4 of the egg mixture to form one pancake about 12cm wide. Cook undisturbed 2 to 3 minutes until edges look set and bottom is golden. Flip and cook 1 to 2 more minutes. Repeat to make 4 pancakes total.</li>
+        <li>MAKE THE GRAVY in the same pan: In a small cup mix cornstarch with 30ml of the cold broth until smooth with no lumps. Add remaining broth, Bragg, ginger, and garlic powder to the pan on medium heat. Bring to a gentle simmer. Pour in cornstarch mixture while stirring constantly. Gravy thickens within 60 seconds. Remove from heat. Stir in sesame oil.</li>
+        <li>Serve 2 pancakes over rice per person. Pour gravy generously over the pancakes.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~480 &nbsp;
+    Potassium: ~430mg &nbsp;
+    Sodium: ~420mg &nbsp;
+    Protein: ~24g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-3" class="recipe">
+  <h2 class="recipe-title">Recipe 3: Tofu Scramble with Spinach and Cherry Tomato</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • Great for any meal</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>300g extra firm tofu</li>
+        <li>80g fresh baby spinach</li>
+        <li>80g cherry tomatoes</li>
+        <li>60g yellow onion</li>
+        <li>8g garlic</li>
+        <li>2g turmeric</li>
+        <li>2g garlic powder</li>
+        <li>2g smoked paprika</li>
+        <li>2g cumin</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>15ml fresh lemon juice to finish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a large pan on medium. Add onion and cook 4 minutes until soft.</li>
+        <li>Add garlic and stir 30 seconds. Add turmeric, garlic powder, paprika, and cumin. Stir 30 seconds.</li>
+        <li>Crumble tofu into the pan. Add salt and pepper. Stir to coat in the spices.</li>
+        <li>Let tofu sit undisturbed 2 minutes to develop a light crust. Then stir.</li>
+        <li>Add cherry tomatoes and stir 1 minute. Add spinach and stir until wilted, about 90 seconds.</li>
+        <li>Remove from heat. Squeeze lemon juice over everything.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~210 &nbsp;
+    Potassium: ~380mg &nbsp;
+    Sodium: ~290mg &nbsp;
+    Protein: ~20g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-4" class="recipe">
+  <h2 class="recipe-title">Recipe 4: Soy Curl Chik-Style Strips</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • The base protein for many recipes in this book</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>40g dry Butler Soy Curls</li>
+        <li>240ml Chik-Style Broth</li>
+        <li>15ml light olive oil</li>
+        <li>2g garlic powder</li>
+        <li>2g smoked paprika</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Pour Chik-Style Broth over dry Soy Curls in a bowl. Let soak 10 minutes until softened.</li>
+        <li>Squeeze out excess liquid gently — damp but not dripping.</li>
+        <li>Heat olive oil in a pan on medium-high. Add Soy Curls and spread into a single layer.</li>
+        <li>Add garlic powder, smoked paprika, and pepper. Stir to coat.</li>
+        <li>Cook 5 to 7 minutes, stirring every 2 minutes, until golden and slightly crispy on the edges.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~120 &nbsp;
+    Potassium: ~180mg &nbsp;
+    Sodium: ~280mg &nbsp;
+    Protein: ~11g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-5" class="recipe">
+  <h2 class="recipe-title">Recipe 5: Fried Eggs over Jasmine Rice with Bragg Drizzle</h2>
+  <p class="recipe-meta">Ready in 10 minutes • 1 pan • Fastest meal in this book</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>2 large eggs</li>
+        <li>185g cooked jasmine rice</li>
+        <li>15ml light olive oil</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>5ml sesame oil</li>
+        <li>20g green onions</li>
+        <li>3g sesame seeds</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm rice in microwave 60 to 90 seconds. Place in a bowl.</li>
+        <li>Heat olive oil in a pan on medium. Crack eggs in gently. Season with black pepper.</li>
+        <li>Cook eggs to your preference — 2 minutes for runny yolk, 3 to 4 minutes for set yolk.</li>
+        <li>Slide eggs onto the rice. Drizzle Bragg and sesame oil over everything.</li>
+        <li>Scatter green onions and sesame seeds on top. Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~380 &nbsp;
+    Potassium: ~240mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~16g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-6" class="recipe">
+  <h2 class="recipe-title">Recipe 6: Ground Turkey and Zucchini Skillet</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • High protein meat meal</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>170g ground turkey, 93% lean</li>
+        <li>200g zucchini</li>
+        <li>80g yellow onion</li>
+        <li>8g garlic</li>
+        <li>4g cumin</li>
+        <li>3g smoked paprika</li>
+        <li>2g garlic powder</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>15ml light olive oil</li>
+        <li>15ml fresh lime juice to finish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a large pan on medium-high. Add onion and cook 3 minutes.</li>
+        <li>Add ground turkey. Break into small pieces. Cook 5 to 6 minutes until no pink remains and lightly browned.</li>
+        <li>Push turkey to one side. Add garlic and stir 30 seconds then mix in.</li>
+        <li>Add diced zucchini, cumin, paprika, garlic powder, salt, and pepper. Stir everything together.</li>
+        <li>Cook 4 to 5 minutes until zucchini is tender but still has some bite.</li>
+        <li>Squeeze lime juice over the pan and stir.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~270 &nbsp;
+    Potassium: ~580mg &nbsp;
+    Sodium: ~330mg &nbsp;
+    Protein: ~32g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-7" class="recipe">
+  <h2 class="recipe-title">Recipe 7: Ground Chicken Lettuce Cups with Ginger</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • Light and fresh</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>170g ground chicken</li>
+        <li>8 large romaine or butter lettuce leaves</li>
+        <li>80g frozen peas and carrots mix</li>
+        <li>40g green onions</li>
+        <li>8g garlic</li>
+        <li>5g fresh ginger</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>15ml rice vinegar</li>
+        <li>5ml sesame oil</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>15ml light olive oil</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium-high. Add ground chicken and break into small pieces. Cook 4 to 5 minutes until cooked through.</li>
+        <li>Add garlic and ginger. Stir 30 seconds.</li>
+        <li>Add peas and carrots. Stir 1 minute.</li>
+        <li>Add Bragg, rice vinegar, and sweetener. Stir and cook 1 minute until sauce coats everything.</li>
+        <li>Remove from heat. Stir in sesame oil.</li>
+        <li>Spoon filling into lettuce cups. Top with sliced green onions. Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~230 &nbsp;
+    Potassium: ~420mg &nbsp;
+    Sodium: ~340mg &nbsp;
+    Protein: ~28g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-8" class="recipe">
+  <h2 class="recipe-title">Recipe 8: Quorn and Vegetable Stir-Fry</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • Convenient plant-based meal</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g Quorn Meatless Pieces</li>
+        <li>100g broccoli florets</li>
+        <li>80g snap peas or frozen peas</li>
+        <li>75g bell pepper</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>15ml rice vinegar</li>
+        <li>5ml sesame oil</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>2g garlic powder</li>
+        <li>3g sesame seeds to serve</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a large pan on high heat.</li>
+        <li>Add Quorn pieces and cook 3 to 4 minutes until lightly browned. Remove and set aside.</li>
+        <li>In the same pan add garlic and stir 20 seconds. Add broccoli and bell pepper. Cook 3 minutes, stirring often.</li>
+        <li>Add snap peas and stir 1 minute.</li>
+        <li>Return Quorn to the pan. Add Bragg, rice vinegar, sweetener, and garlic powder. Stir everything together 1 minute.</li>
+        <li>Remove from heat. Stir in sesame oil. Scatter sesame seeds on top. Serve over jasmine rice.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~260 &nbsp;
+    Potassium: ~420mg &nbsp;
+    Sodium: ~360mg &nbsp;
+    Protein: ~22g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-9" class="recipe">
+  <h2 class="recipe-title">Recipe 9: Simple Baked Tofu</h2>
+  <p class="recipe-meta">Ready in 35 minutes • Oven method • Hands-off cooking</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>350g extra firm tofu</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>15ml light olive oil</li>
+        <li>3g garlic powder</li>
+        <li>3g smoked paprika</li>
+        <li>2g onion powder</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Preheat oven to 200 degrees C (400 degrees F). Line a baking sheet with parchment paper.</li>
+        <li>Cut pressed tofu into 2cm cubes. Pat very dry.</li>
+        <li>In a bowl mix Bragg, olive oil, garlic powder, paprika, onion powder, salt, and pepper.</li>
+        <li>Add tofu cubes and toss gently to coat. Spread in a single layer on the baking sheet.</li>
+        <li>Bake 25 to 28 minutes, flipping once at 12 minutes, until golden and firm.</li>
+        <li>Let cool 5 minutes before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~175 &nbsp;
+    Potassium: ~160mg &nbsp;
+    Sodium: ~280mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-10" class="recipe">
+  <h2 class="recipe-title">Recipe 10: Simple Ground Turkey Egg Scramble</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • High protein comfort meal</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>100g ground turkey, 93% lean</li>
+        <li>3 large eggs</li>
+        <li>50g yellow onion</li>
+        <li>40g frozen peas</li>
+        <li>4g garlic</li>
+        <li>2g cumin</li>
+        <li>1g smoked paprika</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>20g green onions</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium. Add onion and cook 3 minutes.</li>
+        <li>Add ground turkey and break into small pieces. Cook 4 to 5 minutes until no pink remains.</li>
+        <li>Add garlic, cumin, paprika, garlic powder, salt, and pepper. Stir 30 seconds.</li>
+        <li>Add thawed peas and stir 1 minute.</li>
+        <li>Pour beaten eggs over everything in the pan. Let sit 30 seconds then gently fold with a spatula as eggs set. Cook 2 to 3 minutes until just cooked through.</li>
+        <li>Remove from heat. Scatter green onions on top.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~290 &nbsp;
+    Potassium: ~360mg &nbsp;
+    Sodium: ~360mg &nbsp;
+    Protein: ~30g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 2 — Rice and Grain Bowls</h2>
+    
+<article id="recipe-11" class="recipe">
+  <h2 class="recipe-title">Recipe 11: Soy Curl Fajita Bowl</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Colorful and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>120g cooked Soy Curl Strips</li>
+        <li>185g cooked jasmine rice</li>
+        <li>75g bell pepper</li>
+        <li>60g yellow onion</li>
+        <li>5g Fajita Seasoning Blend</li>
+        <li>15ml light olive oil</li>
+        <li>30g Avocado Crema or 40g avocado sliced</li>
+        <li>30g Simple Salsa Fresca or low-sodium store-bought salsa</li>
+        <li>15ml fresh lime juice</li>
+        <li>10g fresh cilantro to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium-high. Add sliced peppers and onion.</li>
+        <li>Sprinkle Fajita Blend over vegetables. Cook 4 to 5 minutes until softened and slightly charred.</li>
+        <li>Add Soy Curl Strips to warm through, 1 to 2 minutes.</li>
+        <li>Serve over rice. Top with Avocado Crema, salsa, a squeeze of lime, and cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~420 &nbsp;
+    Potassium: ~580mg &nbsp;
+    Sodium: ~410mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-12" class="recipe">
+  <h2 class="recipe-title">Recipe 12: Chipotle-Style Chicken Burrito Bowl</h2>
+  <p class="recipe-meta">Ready in 15 minutes • Assembly only • Uses Sprouts rotisserie chicken</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g Sprouts rotisserie chicken, skin removed and shredded</li>
+        <li>185g cooked jasmine rice — or use Cilantro Lime Rice</li>
+        <li>120g WinCo low sodium black beans</li>
+        <li>30g Simple Salsa Fresca</li>
+        <li>30g Avocado Crema or 40g avocado sliced</li>
+        <li>40g frozen corn kernels</li>
+        <li>60g romaine lettuce</li>
+        <li>15ml fresh lime juice</li>
+        <li>10g fresh cilantro</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm shredded chicken briefly in microwave 30 seconds.</li>
+        <li>Layer rice in a bowl as the base.</li>
+        <li>Add warm chicken, black beans, and corn on top of the rice.</li>
+        <li>Add fresh romaine on the side.</li>
+        <li>Top with Avocado Crema or avocado slices and salsa.</li>
+        <li>Squeeze lime juice over everything and add cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~450 &nbsp;
+    Potassium: ~540mg &nbsp;
+    Sodium: ~430mg &nbsp;
+    Protein: ~30g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-13" class="recipe">
+  <h2 class="recipe-title">Recipe 13: Ground Turkey Taco Rice Bowl</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan plus rice • Comfort food bowl</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>1 serving Ground Turkey and Zucchini Skillet</li>
+        <li>185g cooked jasmine rice</li>
+        <li>120g WinCo low sodium black beans</li>
+        <li>60g romaine lettuce</li>
+        <li>40g avocado</li>
+        <li>30g Simple Salsa Fresca</li>
+        <li>15ml fresh lime juice</li>
+        <li>10g fresh cilantro</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Make the Ground Turkey and Zucchini Skillet following Recipe 6.</li>
+        <li>Layer rice in a bowl.</li>
+        <li>Add turkey skillet on top of the rice.</li>
+        <li>Add black beans, shredded lettuce, and avocado slices.</li>
+        <li>Top with salsa, a squeeze of lime, and cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~470 &nbsp;
+    Potassium: ~670mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~36g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-14" class="recipe">
+  <h2 class="recipe-title">Recipe 14: Simple Fried Rice with Egg and Frozen Vegetables</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • Use leftover rice</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>278g cold cooked jasmine rice</li>
+        <li>2 large eggs</li>
+        <li>120g frozen peas and carrots mix</li>
+        <li>40g green onions</li>
+        <li>8g garlic</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>5ml sesame oil</li>
+        <li>15ml light olive oil</li>
+        <li>1g black pepper</li>
+        <li>3g sesame seeds to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a large pan on high heat until very hot.</li>
+        <li>Add garlic and stir 20 seconds. Add peas and carrots and stir 1 minute.</li>
+        <li>Add cold rice and break up any clumps. Stir and press for 2 minutes until rice starts to look toasted.</li>
+        <li>Add Bragg and black pepper. Stir vigorously to coat rice evenly.</li>
+        <li>Push everything to the edges. Pour beaten eggs into the center. Let sit 15 seconds then scramble gently as they set. Fold into the rice once eggs are just cooked.</li>
+        <li>Remove from heat. Stir in sesame oil. Top with green onions and sesame seeds.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~380 &nbsp;
+    Potassium: ~340mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-15" class="recipe">
+  <h2 class="recipe-title">Recipe 15: Korean-Inspired Tofu Rice Bowl</h2>
+  <p class="recipe-meta">Ready in 25 minutes • 1 pan plus rice • Colorful and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>300g extra firm tofu</li>
+        <li>185g cooked jasmine rice</li>
+        <li>100g broccoli florets , steamed 2 to 3 minutes</li>
+        <li>80g carrots</li>
+        <li>60g frozen peas</li>
+        <li>30ml Sesame-Ginger Dressing</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>15ml light olive oil</li>
+        <li>3g sesame seeds</li>
+        <li>20g green onions</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium-high. Add tofu slices. Drizzle Bragg over them.</li>
+        <li>Cook 3 to 4 minutes without moving. Flip and cook 2 to 3 more minutes until golden.</li>
+        <li>Steam or microwave broccoli 2 to 3 minutes until tender but still bright green.</li>
+        <li>Assemble bowl: rice as the base, then tofu, broccoli, carrots, and peas arranged on top.</li>
+        <li>Drizzle Sesame-Ginger Dressing over everything. Top with sesame seeds and green onions.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~410 &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~22g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-16" class="recipe">
+  <h2 class="recipe-title">Recipe 16: Mediterranean Chickpea Bowl</h2>
+  <p class="recipe-meta">Ready in 15 minutes • No cooking if grains are ready • Fresh and light</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>126g WinCo low sodium garbanzo beans</li>
+        <li>185g cooked jasmine rice or barley</li>
+        <li>150g English cucumber</li>
+        <li>80g cherry tomatoes</li>
+        <li>40g red onion</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>10g fresh parsley</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g dried oregano</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm chickpeas briefly in microwave 45 seconds or heat in a pan with a splash of olive oil 2 minutes.</li>
+        <li>Place rice or barley in a bowl as the base.</li>
+        <li>Top with warm chickpeas, cucumber, cherry tomatoes, and red onion.</li>
+        <li>Drizzle Lemon and Olive Oil Dressing over everything.</li>
+        <li>Sprinkle parsley, oregano, and black pepper on top. Add a final squeeze of lemon juice.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~380 &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~210mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-17" class="recipe">
+  <h2 class="recipe-title">Recipe 17: Teriyaki Soy Curl Bowl</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • Sweet and savory</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>40g dry Butler Soy Curls</li>
+        <li>240ml Chik-Style Broth for soaking</li>
+        <li>185g cooked jasmine rice</li>
+        <li>100g broccoli florets</li>
+        <li>75g snap peas</li>
+        <li>30ml Teriyaki Glaze</li>
+        <li>15ml light olive oil</li>
+        <li>3g sesame seeds</li>
+        <li>20g green onions</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Rehydrate Soy Curls in Chik-Style Broth 10 minutes. Squeeze out excess liquid.</li>
+        <li>Heat olive oil in a pan on medium-high. Add Soy Curls and cook 5 minutes until golden.</li>
+        <li>Pour Teriyaki Glaze over Soy Curls. Stir to coat. Cook 1 minute until glaze caramelizes. Remove from pan.</li>
+        <li>In the same pan add broccoli and snap peas with a splash of water. Cover and steam 2 to 3 minutes until bright green.</li>
+        <li>Serve over rice. Top with Teriyaki Soy Curls and vegetables. Garnish with sesame seeds and green onions.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~380 &nbsp;
+    Potassium: ~420mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~16g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-18" class="recipe">
+  <h2 class="recipe-title">Recipe 18: Black Bean and Rice Bowl with Avocado</h2>
+  <p class="recipe-meta">Ready in 10 minutes • Assembly only • Fastest bowl in this book</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>185g cooked jasmine rice</li>
+        <li>130g WinCo low sodium black beans</li>
+        <li>40g avocado</li>
+        <li>40g frozen corn kernels</li>
+        <li>30g Simple Salsa Fresca or low-sodium store-bought salsa</li>
+        <li>15ml fresh lime juice</li>
+        <li>2g cumin</li>
+        <li>1g fine sea salt</li>
+        <li>10g fresh cilantro to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm rice and black beans in microwave 60 to 90 seconds.</li>
+        <li>Place warm rice in a bowl. Add black beans and corn.</li>
+        <li>Arrange avocado slices on top.</li>
+        <li>Add salsa, a drizzle of lime juice, cumin, and a small pinch of salt.</li>
+        <li>Garnish with cilantro. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~360 &nbsp;
+    Potassium: ~530mg &nbsp;
+    Sodium: ~200mg &nbsp;
+    Protein: ~11g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-19" class="recipe">
+  <h2 class="recipe-title">Recipe 19: Spanish Rice</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Great side dish or bowl base all week</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>280g dry jasmine or long grain white rice</li>
+        <li>480ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>200g WinCo diced tomatoes with liquid</li>
+        <li>80g yellow onion</li>
+        <li>8g garlic</li>
+        <li>4g cumin</li>
+        <li>3g smoked paprika</li>
+        <li>2g garlic powder</li>
+        <li>2g dried oregano</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>15ml fresh lime juice to finish</li>
+        <li>10g fresh cilantro to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a medium saucepan on medium-high. Add onion and cook 4 minutes until softened.</li>
+        <li>Add garlic, cumin, paprika, garlic powder, oregano, salt, and pepper. Stir 30 seconds.</li>
+        <li>Add dry rice and stir to coat every grain in the spiced oil. Toast the rice 2 minutes, stirring frequently, until grains look opaque and smell faintly nutty.</li>
+        <li>Add broth and diced tomatoes with their liquid. Stir once. Bring to a boil.</li>
+        <li>Reduce heat to the lowest setting. Cover tightly. Cook 18 minutes without lifting the lid.</li>
+        <li>Remove from heat. Leave covered and undisturbed 5 minutes. Lift lid, fluff with a fork. Squeeze lime juice over the rice and fold in cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~320mg &nbsp;
+    Sodium: ~390mg &nbsp;
+    Protein: ~6g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-20" class="recipe">
+  <h2 class="recipe-title">Recipe 20: Chipotle-Style Cilantro Lime Rice</h2>
+  <p class="recipe-meta">Ready in 20 minutes • Rice cooker • Restaurant-style with almost no effort</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>280g dry jasmine rice</li>
+        <li>420ml water</li>
+        <li>3g fine sea salt</li>
+        <li>30ml fresh lime juice — added AFTER rice is cooked</li>
+        <li>15g fresh cilantro</li>
+        <li>15ml extra virgin olive oil — added AFTER cooking</li>
+        <li>Zest of 1 lime — optional, adds extra lime brightness</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Rinse dry rice in a fine mesh strainer under cold water for 30 seconds until the water runs mostly clear.</li>
+        <li>Add rinsed rice, water, and salt to your rice cooker. Press cook. Walk away — the rice cooker handles everything.</li>
+        <li>When the rice cooker finishes and switches to warm, let it sit 5 minutes with the lid on before opening.</li>
+        <li>Open the lid and fluff rice gently with a fork or rice paddle.</li>
+        <li>Pour lime juice over the hot rice. Add extra virgin olive oil and optional lime zest. Fold everything together gently — do not stir aggressively or the rice becomes sticky.</li>
+        <li>Add chopped cilantro and fold in gently. Taste and add a tiny pinch more salt if needed. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~260 &nbsp;
+    Potassium: ~55mg &nbsp;
+    Sodium: ~220mg &nbsp;
+    Protein: ~5g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 3 — Wraps and Sandwiches</h2>
+    
+<article id="recipe-21" class="recipe">
+  <h2 class="recipe-title">Recipe 21: Soy Curl Fajita Burrito Wrap</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • Satisfying and portable</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>120g cooked Soy Curl Strips</li>
+        <li>1 large whole wheat flour tortilla — Guerrero WW</li>
+        <li>75g bell pepper</li>
+        <li>60g yellow onion</li>
+        <li>90g cooked jasmine rice</li>
+        <li>30g Avocado Crema or 40g avocado mashed</li>
+        <li>30g Simple Salsa Fresca</li>
+        <li>40g romaine lettuce</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook fajita vegetables: heat 5ml olive oil on medium-high, add sliced pepper and onion, sprinkle 3g Fajita Blend, cook 4 to 5 minutes until tender and slightly charred.</li>
+        <li>Warm the tortilla — wrap in a damp paper towel and microwave 20 seconds until pliable.</li>
+        <li>Lay flat and spread Avocado Crema across the center.</li>
+        <li>Add rice, then Soy Curl Strips, then fajita vegetables, then lettuce, then salsa.</li>
+        <li>Fold the sides of the tortilla in then roll up tightly from the bottom.</li>
+        <li>Eat immediately or wrap in foil to keep warm.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~430 &nbsp;
+    Potassium: ~540mg &nbsp;
+    Sodium: ~420mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-22" class="recipe">
+  <h2 class="recipe-title">Recipe 22: Ground Turkey Burrito</h2>
+  <p class="recipe-meta">Ready in 25 minutes • 1 pan plus assembly • Hearty meal</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g ground turkey 93% lean</li>
+        <li>1 large whole wheat flour tortilla</li>
+        <li>90g cooked jasmine rice</li>
+        <li>120g WinCo low sodium black beans</li>
+        <li>30g Avocado Crema</li>
+        <li>30g Simple Salsa Fresca</li>
+        <li>40g romaine lettuce</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook ground turkey with Fajita Blend in a hot pan 5 to 6 minutes until cooked through and lightly browned.</li>
+        <li>Warm tortilla 20 seconds in microwave wrapped in damp paper towel.</li>
+        <li>Spread Avocado Crema down the center. Add rice, then black beans, then turkey.</li>
+        <li>Top with salsa and shredded lettuce.</li>
+        <li>Fold sides in and roll tightly. Slice in half if desired.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~460 &nbsp;
+    Potassium: ~560mg &nbsp;
+    Sodium: ~400mg &nbsp;
+    Protein: ~32g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-23" class="recipe">
+  <h2 class="recipe-title">Recipe 23: Simple Chicken and Avocado Wrap</h2>
+  <p class="recipe-meta">Ready in 10 minutes • Assembly only • Uses rotisserie chicken</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g Sprouts rotisserie chicken, skin removed and shredded</li>
+        <li>1 large whole wheat flour tortilla</li>
+        <li>50g avocado</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>60g romaine lettuce</li>
+        <li>40g cherry tomatoes</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g black pepper</li>
+        <li>1g garlic powder</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm shredded chicken in microwave 30 seconds. Season with garlic powder and black pepper.</li>
+        <li>Warm tortilla 20 seconds in microwave.</li>
+        <li>Mash avocado with a fork on the center of the tortilla. Add a squeeze of lemon juice on the avocado.</li>
+        <li>Add chicken, then lettuce, then cherry tomatoes.</li>
+        <li>Drizzle Lemon and Olive Oil Dressing over everything.</li>
+        <li>Fold sides in and roll. Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~380 &nbsp;
+    Potassium: ~500mg &nbsp;
+    Sodium: ~360mg &nbsp;
+    Protein: ~26g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-24" class="recipe">
+  <h2 class="recipe-title">Recipe 24: Tofu and Vegetable Quesadilla</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • Crispy and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g extra firm tofu</li>
+        <li>2 whole wheat flour tortillas</li>
+        <li>80g bell pepper</li>
+        <li>40g frozen corn kernels</li>
+        <li>120g WinCo low sodium black beans</li>
+        <li>2g cumin</li>
+        <li>2g smoked paprika</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>15ml light olive oil</li>
+        <li>Avocado Crema or Simple Salsa Fresca to serve</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat 7ml olive oil in a pan on medium. Add bell pepper and cook 3 minutes.</li>
+        <li>Add crumbled tofu, corn, black beans, cumin, paprika, garlic powder, and salt. Stir and cook 3 to 4 minutes.</li>
+        <li>Remove filling from pan. Wipe pan and heat remaining olive oil on medium.</li>
+        <li>Lay one tortilla flat in the pan. Spread filling over one half. Fold the other half over the top.</li>
+        <li>Cook 2 to 3 minutes until golden underneath. Flip carefully and cook 2 minutes more.</li>
+        <li>Cut into wedges and serve with Avocado Crema or salsa.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~370 &nbsp;
+    Potassium: ~440mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-25" class="recipe">
+  <h2 class="recipe-title">Recipe 25: Egg and Avocado Breakfast Wrap</h2>
+  <p class="recipe-meta">Ready in 10 minutes • 1 pan • Very low sodium breakfast option</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>2 large eggs</li>
+        <li>1 whole wheat flour tortilla</li>
+        <li>40g avocado</li>
+        <li>40g cherry tomatoes</li>
+        <li>30g fresh spinach</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>5ml light olive oil</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm tortilla 20 seconds in microwave. Spread mashed avocado on it and squeeze lime juice on the avocado.</li>
+        <li>Heat olive oil in a pan on medium. Add tomatoes and stir 30 seconds until slightly softened.</li>
+        <li>Add spinach and stir until wilted, about 30 seconds. Season with garlic powder, salt, and pepper.</li>
+        <li>Pour beaten eggs over the vegetables. Let sit 20 seconds then gently fold as they set. Cook until just done.</li>
+        <li>Slide scrambled egg and vegetables onto the tortilla. Roll and eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~300 &nbsp;
+    Potassium: ~440mg &nbsp;
+    Sodium: ~260mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-26" class="recipe">
+  <h2 class="recipe-title">Recipe 26: Chickpea Smash Sandwich</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking needed • Plant-based and fresh</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>126g WinCo low sodium garbanzo beans</li>
+        <li>2 slices whole wheat bread — look for lowest sodium available</li>
+        <li>15ml Lemon and Olive Oil Dressing</li>
+        <li>40g avocado</li>
+        <li>15g romaine lettuce</li>
+        <li>40g cherry tomatoes</li>
+        <li>15ml fresh lemon juice</li>
+        <li>2g cumin</li>
+        <li>1g garlic powder</li>
+        <li>1g smoked paprika</li>
+        <li>1g fine sea salt and black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Place chickpeas in a bowl. Add lemon juice, cumin, garlic powder, paprika, salt, and pepper.</li>
+        <li>Mash with a fork until chunky — about half smooth, half still whole.</li>
+        <li>Toast the bread if desired.</li>
+        <li>Spread the chickpea smash on one slice.</li>
+        <li>Layer avocado slices, lettuce, and tomatoes on top. Drizzle with Lemon and Olive Oil Dressing.</li>
+        <li>Top with the second slice. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~340 &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~220mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-27" class="recipe">
+  <h2 class="recipe-title">Recipe 27: Tofu Egg-Style Sandwich</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • Satisfying comfort sandwich</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g extra firm tofu</li>
+        <li>2 slices whole wheat bread, low sodium</li>
+        <li>15g Simple Aquafaba Mayo</li>
+        <li>2g turmeric</li>
+        <li>2g garlic powder</li>
+        <li>1g smoked paprika</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>15ml light olive oil</li>
+        <li>1 romaine lettuce leaf</li>
+        <li>60g tomato</li>
+        <li>40g avocado</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Mix turmeric, garlic powder, paprika, salt, and pepper in a small bowl. Brush onto both sides of tofu slices.</li>
+        <li>Heat olive oil in a pan on medium-high. Cook tofu 3 minutes per side until golden.</li>
+        <li>Toast the bread.</li>
+        <li>Spread Aquafaba Mayo on both slices of toast.</li>
+        <li>Layer lettuce, then tofu, then tomato, then avocado.</li>
+        <li>Top with the second slice and press gently. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~360 &nbsp;
+    Potassium: ~430mg &nbsp;
+    Sodium: ~310mg &nbsp;
+    Protein: ~16g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-28" class="recipe">
+  <h2 class="recipe-title">Recipe 28: Simple Black Bean Quesadilla</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan • 5 ingredients</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>2 whole wheat flour tortillas</li>
+        <li>130g WinCo low sodium black beans</li>
+        <li>40g frozen corn kernels</li>
+        <li>2g cumin</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>15ml light olive oil</li>
+        <li>Simple Salsa Fresca to serve</li>
+        <li>Avocado Crema to serve</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine black beans, corn, cumin, garlic powder, and salt in a small bowl. Mash lightly — leave most beans whole.</li>
+        <li>Heat olive oil in a pan on medium. Lay one tortilla flat.</li>
+        <li>Spread bean mixture on one half. Fold the empty half over the filling.</li>
+        <li>Cook 2 to 3 minutes until golden. Flip carefully and cook 2 minutes more.</li>
+        <li>Slide onto a plate. Cut into wedges. Serve with salsa and avocado crema.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~330 &nbsp;
+    Potassium: ~420mg &nbsp;
+    Sodium: ~280mg &nbsp;
+    Protein: ~12g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-29" class="recipe">
+  <h2 class="recipe-title">Recipe 29: Chicken and Mung Bean Sprout Wrap</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking needed • Light and crunchy</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g Sprouts rotisserie chicken, skin removed and shredded</li>
+        <li>1 large whole wheat flour tortilla</li>
+        <li>75g mung bean sprouts</li>
+        <li>40g cabbage or romaine</li>
+        <li>40g carrots</li>
+        <li>30ml Sesame-Ginger Dressing</li>
+        <li>20g green onions</li>
+        <li>10g fresh cilantro leaves</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Warm tortilla 20 seconds in microwave.</li>
+        <li>Warm chicken briefly in microwave 30 seconds.</li>
+        <li>Lay tortilla flat. Arrange chicken, sprouts, cabbage, and carrots down the center.</li>
+        <li>Add green onion and cilantro. Squeeze lime juice over everything.</li>
+        <li>Drizzle Sesame-Ginger Dressing over the filling.</li>
+        <li>Roll tightly and eat immediately — the sprouts are best when fresh and crunchy.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~340 &nbsp;
+    Potassium: ~470mg &nbsp;
+    Sodium: ~350mg &nbsp;
+    Protein: ~26g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-30" class="recipe">
+  <h2 class="recipe-title">Recipe 30: Warm Vegetable and Hummus Wrap</h2>
+  <p class="recipe-meta">Ready in 15 minutes • 1 pan plus assembly • Satisfying plant-based</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>1 large whole wheat flour tortilla</li>
+        <li>45g Kirkland Signature hummus</li>
+        <li>80g zucchini</li>
+        <li>75g bell pepper</li>
+        <li>50g yellow onion</li>
+        <li>2g garlic powder</li>
+        <li>2g smoked paprika</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>40g romaine or spinach</li>
+        <li>15ml fresh lemon juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium-high. Add zucchini, bell pepper, and onion.</li>
+        <li>Sprinkle garlic powder, paprika, and black pepper over vegetables. Cook 4 to 5 minutes until tender and slightly golden.</li>
+        <li>Warm tortilla 20 seconds in microwave.</li>
+        <li>Spread hummus across the center of the warm tortilla.</li>
+        <li>Add the warm vegetables and lettuce or spinach on top of the hummus.</li>
+        <li>Squeeze lemon juice over everything. Roll tightly and eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~340 &nbsp;
+    Potassium: ~490mg &nbsp;
+    Sodium: ~370mg &nbsp;
+    Protein: ~10g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 4 — Soups and Stews</h2>
+    
+<article id="recipe-31" class="recipe">
+  <h2 class="recipe-title">Recipe 31: Instant Pot Vegetable Lentil Soup</h2>
+  <p class="recipe-meta">Ready in 35 minutes • Instant Pot • Load and walk away</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>200g dry brown or green lentils</li>
+        <li>150g carrots</li>
+        <li>100g celery</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>400g WinCo diced tomatoes with liquid</li>
+        <li>720ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>4g Warm Spice Blend</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>30ml fresh lemon juice to finish</li>
+        <li>10g fresh parsley to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients except lemon juice and parsley to your Instant Pot. Stir once.</li>
+        <li>Seal the lid and set valve to Sealing.</li>
+        <li>Press Manual or Pressure Cook. Set to High Pressure for 15 minutes. Press Start.</li>
+        <li>When done let it natural release for 10 minutes. Then carefully switch valve to Venting to release remaining steam.</li>
+        <li>Open lid. Stir. Squeeze lemon juice in. Taste and adjust salt.</li>
+        <li>Serve topped with fresh parsley. Makes 3 servings.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~260 &nbsp;
+    Potassium: ~640mg &nbsp;
+    Sodium: ~390mg &nbsp;
+    Protein: ~16g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-32" class="recipe">
+  <h2 class="recipe-title">Recipe 32: Instant Pot Black Bean and Corn Stew</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Instant Pot • One of the easiest in this book</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>260g WinCo low sodium black beans</li>
+        <li>160g frozen corn kernels</li>
+        <li>400g WinCo diced tomatoes with liquid</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>360ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>4g cumin</li>
+        <li>3g smoked paprika</li>
+        <li>2g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml fresh lime juice to finish</li>
+        <li>10g fresh cilantro to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients except lime juice and cilantro directly to the Instant Pot. Stir once.</li>
+        <li>Seal the lid. Set valve to Sealing. Press Manual, High Pressure, 12 minutes.</li>
+        <li>Natural release 10 minutes then carefully switch to Venting.</li>
+        <li>Open and stir. Use the back of a spoon to mash about 1/4 of the beans against the side of the pot — this makes the stew thicker.</li>
+        <li>Squeeze lime juice in. Taste and adjust salt. Serve topped with cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~600mg &nbsp;
+    Sodium: ~370mg &nbsp;
+    Protein: ~15g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-33" class="recipe">
+  <h2 class="recipe-title">Recipe 33: Simple Chickpea Tomato Soup</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Warming and simple</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>126g WinCo low sodium garbanzo beans</li>
+        <li>400g WinCo crushed tomatoes</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>480ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>15ml light olive oil</li>
+        <li>2g dried basil</li>
+        <li>2g dried oregano</li>
+        <li>2g cumin</li>
+        <li>1g smoked paprika</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>10g fresh basil or parsley to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a medium pot on medium heat. Add onion and cook 5 minutes.</li>
+        <li>Add garlic, basil, oregano, cumin, and paprika. Stir 30 seconds.</li>
+        <li>Add crushed tomatoes, broth, chickpeas, salt, and pepper. Stir and bring to a gentle boil.</li>
+        <li>Reduce heat and simmer 15 minutes. Taste and adjust seasoning.</li>
+        <li>For a thicker soup use a spoon to mash about 1/3 of the chickpeas against the side of the pot.</li>
+        <li>Serve topped with fresh basil or parsley.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~230 &nbsp;
+    Potassium: ~520mg &nbsp;
+    Sodium: ~430mg &nbsp;
+    Protein: ~11g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-34" class="recipe">
+  <h2 class="recipe-title">Recipe 34: Instant Pot Soy Curl Noodle Soup</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Instant Pot • Comforting like chicken noodle soup</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>60g dry Butler Soy Curls</li>
+        <li>720ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>240ml water</li>
+        <li>150g carrots</li>
+        <li>100g celery</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>2g dried thyme</li>
+        <li>2g garlic powder</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>85g dry Banza chickpea pasta or rice noodles — added after pressure cooking only</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Squeeze excess liquid from rehydrated Soy Curls gently.</li>
+        <li>Add Soy Curls, broth, water, carrots, celery, onion, garlic, thyme, garlic powder, salt, and pepper to the Instant Pot.</li>
+        <li>Seal lid, set valve to Sealing. High Pressure for 8 minutes.</li>
+        <li>Natural release 8 minutes then carefully switch to Venting.</li>
+        <li>Open and stir. Turn Instant Pot to Saute mode. Add pasta. Cook according to pasta package time, stirring occasionally, until tender.</li>
+        <li>Taste and adjust seasoning. Turn off Saute mode. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~420mg &nbsp;
+    Sodium: ~420mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-35" class="recipe">
+  <h2 class="recipe-title">Recipe 35: Simple Zucchini and White Bean Soup</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Light and flavorful</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>100g low sodium canned white beans</li>
+        <li>300g zucchini</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>600ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>15ml light olive oil</li>
+        <li>2g dried thyme</li>
+        <li>2g dried basil</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml fresh lemon juice and 10g parsley to finish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pot on medium. Add onion and cook 5 minutes.</li>
+        <li>Add garlic, thyme, and basil. Stir 30 seconds.</li>
+        <li>Add zucchini and stir 2 minutes. Add broth, white beans, salt, and pepper.</li>
+        <li>Bring to a gentle boil. Reduce heat and simmer 15 minutes until zucchini is tender.</li>
+        <li>Squeeze lemon juice in. Taste and adjust seasoning. Garnish with fresh parsley.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~200 &nbsp;
+    Potassium: ~490mg &nbsp;
+    Sodium: ~360mg &nbsp;
+    Protein: ~9g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-36" class="recipe">
+  <h2 class="recipe-title">Recipe 36: Instant Pot Pinto Bean Soup</h2>
+  <p class="recipe-meta">Ready in 35 minutes from dry beans • Instant Pot • Your familiar Instant Pot dish elevated</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>200g dry pinto beans, soaked overnight and drained</li>
+        <li>840ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>100g yellow onion</li>
+        <li>12g garlic</li>
+        <li>400g WinCo diced tomatoes with liquid</li>
+        <li>4g cumin</li>
+        <li>3g smoked paprika</li>
+        <li>2g dried oregano</li>
+        <li>2g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml fresh lime juice to finish</li>
+        <li>10g fresh cilantro to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients except lime juice and cilantro to the Instant Pot. Stir once.</li>
+        <li>Seal the lid, valve to Sealing. Press Manual, High Pressure, 35 minutes for dry soaked beans.</li>
+        <li>Natural release 15 minutes then carefully switch to Venting.</li>
+        <li>Open and stir. Taste and add lime juice. Adjust salt if needed.</li>
+        <li>Ladle into bowls and top with cilantro.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~270 &nbsp;
+    Potassium: ~580mg &nbsp;
+    Sodium: ~380mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-37" class="recipe">
+  <h2 class="recipe-title">Recipe 37: Simple Tomato Basil Lentil Soup</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Stovetop • Comforting Italian-inspired</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g dry red lentils</li>
+        <li>400g WinCo crushed tomatoes</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>600ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>15ml light olive oil</li>
+        <li>3g dried basil</li>
+        <li>2g dried oregano</li>
+        <li>1g smoked paprika</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>10g fresh basil to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a medium pot on medium. Add onion and cook 5 minutes.</li>
+        <li>Add garlic, basil, oregano, and paprika. Stir 30 seconds.</li>
+        <li>Add lentils, crushed tomatoes, broth, sweetener, salt, and pepper. Stir and bring to a boil.</li>
+        <li>Reduce heat to medium-low. Simmer 20 to 22 minutes until lentils have broken down into the soup.</li>
+        <li>Taste and adjust seasoning. Serve topped with fresh basil.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~250 &nbsp;
+    Potassium: ~560mg &nbsp;
+    Sodium: ~410mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-38" class="recipe">
+  <h2 class="recipe-title">Recipe 38: Simple Vegetable Miso Broth Bowl</h2>
+  <p class="recipe-meta">Ready in 10 minutes • Stovetop • Fastest soup in this book</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>15g Hikari Organic Mild Sodium white miso paste</li>
+        <li>480ml hot water — not boiling</li>
+        <li>40g firm tofu</li>
+        <li>30g frozen peas or corn</li>
+        <li>20g green onions</li>
+        <li>50g fresh baby spinach</li>
+        <li>3ml sesame oil — stirred in at the end only</li>
+        <li>3g sesame seeds to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Boil water in your kettle. Let it sit 2 minutes so it is hot but not at a rolling boil.</li>
+        <li>In your bowl dissolve miso paste in 60ml of the hot water, stirring until no lumps remain.</li>
+        <li>Pour remaining hot water into the bowl.</li>
+        <li>Add tofu, peas or corn, and spinach. The heat from the broth will warm them gently.</li>
+        <li>Stir in sesame oil. Top with green onions and sesame seeds. Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~110 &nbsp;
+    Potassium: ~330mg &nbsp;
+    Sodium: ~560mg &nbsp;
+    Protein: ~8g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-39" class="recipe">
+  <h2 class="recipe-title">Recipe 39: Ground Turkey and Vegetable Soup</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Stovetop • Hearty and high-protein</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>170g ground turkey, 93% lean</li>
+        <li>150g carrots</li>
+        <li>100g celery</li>
+        <li>100g yellow onion</li>
+        <li>150g zucchini</li>
+        <li>8g garlic</li>
+        <li>400g WinCo diced tomatoes with liquid</li>
+        <li>720ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>2g dried thyme</li>
+        <li>2g dried oregano</li>
+        <li>2g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>10g fresh parsley to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a medium pot on medium-high. Add ground turkey and break into small pieces. Cook 5 to 6 minutes until cooked through.</li>
+        <li>Push turkey to one side. Add onion and cook 3 minutes. Add garlic and stir 30 seconds.</li>
+        <li>Add carrots, celery, zucchini, thyme, oregano, garlic powder, salt, and pepper. Stir everything together.</li>
+        <li>Add diced tomatoes and broth. Bring to a boil.</li>
+        <li>Reduce heat to medium-low. Simmer 15 minutes until vegetables are tender.</li>
+        <li>Taste and adjust seasoning. Garnish with fresh parsley.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~270 &nbsp;
+    Potassium: ~620mg &nbsp;
+    Sodium: ~410mg &nbsp;
+    Protein: ~28g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-40" class="recipe">
+  <h2 class="recipe-title">Recipe 40: Instant Pot Corn and Potato Chowder</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Instant Pot • Creamy comfort soup</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>350g russet potatoes</li>
+        <li>240g frozen corn kernels</li>
+        <li>100g yellow onion</li>
+        <li>8g garlic</li>
+        <li>480ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>240ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>35g raw cashews blended with 120ml soy beverage until smooth</li>
+        <li>2g dried thyme</li>
+        <li>2g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>20g green onions</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Drain potato from cold water and pat dry. Add to Instant Pot with corn, onion, garlic, broth, soy beverage, thyme, garlic powder, salt, and pepper. Stir once.</li>
+        <li>Seal lid, valve to Sealing. High Pressure for 8 minutes.</li>
+        <li>While waiting blend 35g cashews and 120ml soy beverage in your Ninja blender 30 seconds until smooth. Set aside.</li>
+        <li>Natural release 8 minutes then carefully Venting. Open and stir.</li>
+        <li>Pour cashew cream into the pot and stir. Use the back of a spoon to mash some potatoes against the side for a thick creamy texture — leave most intact.</li>
+        <li>Taste and adjust salt. Serve topped with green onions.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~310 &nbsp;
+    Potassium: ~580mg &nbsp;
+    Sodium: ~290mg &nbsp;
+    Protein: ~10g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 5 — Pasta and Noodles</h2>
+    
+<article id="recipe-41" class="recipe">
+  <h2 class="recipe-title">Recipe 41: Chickpea Pasta with Simple Tomato Sauce</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Classic comfort pasta</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry Banza chickpea pasta — penne or rotini</li>
+        <li>240ml Simple Tomato Sauce</li>
+        <li>8g nutritional yeast</li>
+        <li>10g fresh basil or parsley to garnish</li>
+        <li>5ml extra virgin olive oil</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Bring a large pot of water to a boil. Add 3g salt (3/4 teaspoon) to the water.</li>
+        <li>Cook Banza pasta per package — usually 7 to 9 minutes. Start checking 2 minutes early. Drain immediately when done.</li>
+        <li>Warm Simple Tomato Sauce in a small saucepan on medium-low.</li>
+        <li>Add drained pasta to the sauce. Toss gently to coat.</li>
+        <li>Plate and sprinkle nutritional yeast on top. Add a drizzle of extra virgin olive oil and fresh herbs.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~360 &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~310mg &nbsp;
+    Protein: ~20g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-42" class="recipe">
+  <h2 class="recipe-title">Recipe 42: Chickpea Pasta with Avocado and Lemon</h2>
+  <p class="recipe-meta">Ready in 20 minutes • Stovetop • Fresh and bright</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry Banza chickpea pasta</li>
+        <li>75g ripe avocado</li>
+        <li>30ml fresh lemon juice</li>
+        <li>4g garlic</li>
+        <li>30ml extra virgin olive oil</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>1g garlic powder</li>
+        <li>8g nutritional yeast</li>
+        <li>10g fresh basil or parsley to garnish</li>
+        <li>60g cherry tomatoes</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook pasta in salted boiling water. Before draining save 60ml of pasta water.</li>
+        <li>While pasta cooks mash avocado in a bowl with lemon juice, garlic, olive oil, salt, pepper, and garlic powder until smooth.</li>
+        <li>Drain pasta and add immediately to the avocado mixture. Toss well — the warm pasta melts the avocado into a creamy sauce. Add pasta water 15ml at a time if needed to loosen.</li>
+        <li>Plate and top with nutritional yeast, fresh herbs, and cherry tomatoes.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~400 &nbsp;
+    Potassium: ~560mg &nbsp;
+    Sodium: ~260mg &nbsp;
+    Protein: ~20g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-43" class="recipe">
+  <h2 class="recipe-title">Recipe 43: Soy Curl Chow Mein Style Noodles</h2>
+  <p class="recipe-meta">Ready in 25 minutes • 1 pan • Restaurant-style noodles at home</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry rice noodles or thin wheat noodles</li>
+        <li>40g dry Butler Soy Curls</li>
+        <li>100g green cabbage</li>
+        <li>75g carrots</li>
+        <li>75g mung bean sprouts</li>
+        <li>40g green onions</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>10ml sesame oil</li>
+        <li>15ml rice vinegar</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>2g garlic powder</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook noodles per package. Rinse under cold water and toss with 5ml sesame oil to prevent sticking.</li>
+        <li>Squeeze excess liquid from Soy Curls. Set aside.</li>
+        <li>Heat olive oil in a large pan on high heat. Add garlic and stir 20 seconds.</li>
+        <li>Add cabbage and carrots. Cook 2 minutes, stirring constantly.</li>
+        <li>Add Soy Curls and stir 1 minute. Add cooked noodles and toss everything together.</li>
+        <li>Add Bragg, rice vinegar, sweetener, and garlic powder. Toss vigorously to coat. Cook 2 minutes.</li>
+        <li>Remove from heat. Add remaining sesame oil, bean sprouts, and green onions. Toss once more and serve.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~390 &nbsp;
+    Potassium: ~380mg &nbsp;
+    Sodium: ~390mg &nbsp;
+    Protein: ~16g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-44" class="recipe">
+  <h2 class="recipe-title">Recipe 44: Simple Rice Noodle Stir-Fry</h2>
+  <p class="recipe-meta">Ready in 20 minutes • 1 pan • Light and fresh</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry rice noodles , soaked in warm water 10 minutes and drained</li>
+        <li>100g broccoli florets</li>
+        <li>75g snap peas</li>
+        <li>75g bell pepper</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>10ml sesame oil</li>
+        <li>15ml rice vinegar</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>2g garlic powder</li>
+        <li>3g sesame seeds and 20g green onions to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a large pan on high heat. Add garlic and stir 15 seconds.</li>
+        <li>Add broccoli and bell pepper. Cook 3 minutes stirring constantly.</li>
+        <li>Add snap peas and stir 1 minute.</li>
+        <li>Add drained rice noodles. Toss with the vegetables.</li>
+        <li>Add Bragg, rice vinegar, sweetener, and garlic powder. Toss vigorously 1 to 2 minutes until sauce coats everything.</li>
+        <li>Remove from heat. Drizzle sesame oil over everything. Top with sesame seeds and green onions.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~330 &nbsp;
+    Potassium: ~360mg &nbsp;
+    Sodium: ~350mg &nbsp;
+    Protein: ~6g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-45" class="recipe">
+  <h2 class="recipe-title">Recipe 45: Chickpea Pasta with Peanut Butter Sauce</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop • Rich and satisfying for weight gain</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry Banza chickpea pasta</li>
+        <li>60ml Peanut Dressing</li>
+        <li>75g carrots</li>
+        <li>40g frozen edamame or peas</li>
+        <li>100g broccoli , steamed 2 minutes in microwave with 15ml water</li>
+        <li>20g green onions</li>
+        <li>3g sesame seeds</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook Banza pasta in salted boiling water. Drain when done.</li>
+        <li>Steam broccoli in microwave 2 minutes with a splash of water. Drain.</li>
+        <li>Make or measure out your Peanut Dressing from the Sauce section.</li>
+        <li>Toss warm pasta with Peanut Dressing until every piece is coated.</li>
+        <li>Top with broccoli, carrots, edamame, green onions, and sesame seeds.</li>
+        <li>Squeeze lime juice over everything and serve.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~480 &nbsp;
+    Potassium: ~540mg &nbsp;
+    Sodium: ~360mg &nbsp;
+    Protein: ~26g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-46" class="recipe">
+  <h2 class="recipe-title">Recipe 46: Soy Curl Pad Thai Style Noodles</h2>
+  <p class="recipe-meta">Ready in 25 minutes • 1 pan • Restaurant-inspired</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry flat rice noodles , soaked 10 minutes and drained</li>
+        <li>40g dry Butler Soy Curls</li>
+        <li>2 large eggs</li>
+        <li>100g mung bean sprouts</li>
+        <li>40g green onions</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>45ml Bragg Liquid Aminos</li>
+        <li>15ml rice vinegar</li>
+        <li>15ml maple syrup, honey, or agave</li>
+        <li>15g natural peanut butter</li>
+        <li>15ml fresh lime juice</li>
+        <li>3g sesame seeds and extra lime wedge to serve</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Mix Bragg, rice vinegar, sweetener, peanut butter, and lime juice in a small bowl. Stir until peanut butter is dissolved. Set aside.</li>
+        <li>Heat olive oil in a large pan on high heat. Add Soy Curls and cook 3 to 4 minutes until golden. Push to one side.</li>
+        <li>Add garlic and stir 15 seconds. Pour beaten eggs into the other side of the pan. Scramble gently as they set. Mix into Soy Curls.</li>
+        <li>Add drained noodles. Pour sauce over everything. Toss vigorously 2 minutes until noodles are coated and sauce is absorbed.</li>
+        <li>Remove from heat. Add bean sprouts and green onions. Toss once. Serve immediately topped with sesame seeds and lime.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~430 &nbsp;
+    Potassium: ~390mg &nbsp;
+    Sodium: ~400mg &nbsp;
+    Protein: ~22g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-47" class="recipe">
+  <h2 class="recipe-title">Recipe 47: Simple Garlic and Olive Oil Pasta</h2>
+  <p class="recipe-meta">Ready in 20 minutes • Stovetop • 6 ingredients</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry Banza chickpea pasta</li>
+        <li>45ml extra virgin olive oil</li>
+        <li>12g garlic</li>
+        <li>1g red pepper flakes — optional, skip for no heat</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>8g nutritional yeast</li>
+        <li>10g fresh parsley to garnish</li>
+        <li>15ml fresh lemon juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook pasta in salted boiling water. Before draining save 60ml pasta water.</li>
+        <li>While pasta cooks heat extra virgin olive oil in a small pan on medium-low. Add garlic slices. Cook slowly 3 to 4 minutes until golden and fragrant — watch carefully, do not let them brown or burn.</li>
+        <li>Add red pepper flakes if using, stir 15 seconds. Remove from heat.</li>
+        <li>Drain pasta and add to the garlic oil. Toss to coat. Add pasta water 15ml at a time to create a light silky sauce.</li>
+        <li>Add nutritional yeast, salt, pepper, and lemon juice. Toss again. Top with parsley.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~420 &nbsp;
+    Potassium: ~320mg &nbsp;
+    Sodium: ~250mg &nbsp;
+    Protein: ~18g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-48" class="recipe">
+  <h2 class="recipe-title">Recipe 48: Cold Sesame Noodle Bowl</h2>
+  <p class="recipe-meta">Ready in 20 minutes plus cooling time • No cooking after noodles • Great for warm days</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry rice noodles or thin wheat noodles</li>
+        <li>75g English cucumber</li>
+        <li>75g carrots</li>
+        <li>75g mung bean sprouts</li>
+        <li>40g green onions</li>
+        <li>45ml Sesame-Ginger Dressing</li>
+        <li>3g sesame seeds</li>
+        <li>10g fresh cilantro to garnish</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook noodles per package. Rinse under cold water until completely cold. Toss with 5ml sesame oil to prevent sticking.</li>
+        <li>Shred cucumber and carrots on your box grater.</li>
+        <li>Combine chilled noodles, cucumber, carrots, and sprouts in a bowl.</li>
+        <li>Pour Sesame-Ginger Dressing over everything and toss to coat.</li>
+        <li>Top with green onions, sesame seeds, and cilantro. Squeeze lime juice over everything.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~350 &nbsp;
+    Potassium: ~360mg &nbsp;
+    Sodium: ~310mg &nbsp;
+    Protein: ~8g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-49" class="recipe">
+  <h2 class="recipe-title">Recipe 49: Ground Turkey Bolognese over Chickpea Pasta</h2>
+  <p class="recipe-meta">Ready in 30 minutes • Stovetop • Hearty Italian-style</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>170g ground turkey, 93% lean</li>
+        <li>85g dry Banza chickpea pasta</li>
+        <li>240ml Simple Tomato Sauce</li>
+        <li>80g yellow onion</li>
+        <li>8g garlic</li>
+        <li>2g dried basil</li>
+        <li>2g dried oregano</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>15ml light olive oil</li>
+        <li>8g nutritional yeast to garnish</li>
+        <li>10g fresh basil to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a pan on medium-high. Add onion and cook 4 minutes.</li>
+        <li>Add ground turkey and break into small pieces. Cook 5 to 6 minutes until browned. Add garlic, basil, oregano, salt, and pepper. Stir 30 seconds.</li>
+        <li>Add Simple Tomato Sauce to the turkey. Stir to combine. Simmer 5 minutes on medium-low.</li>
+        <li>Meanwhile cook pasta in salted boiling water. Drain.</li>
+        <li>Serve pasta topped with the turkey bolognese. Sprinkle nutritional yeast and fresh basil on top.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~470 &nbsp;
+    Potassium: ~600mg &nbsp;
+    Sodium: ~340mg &nbsp;
+    Protein: ~40g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-50" class="recipe">
+  <h2 class="recipe-title">Recipe 50: Chickpea Pasta with White Bean Cream Sauce</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Stovetop and blender • Creamy and comforting</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry Banza chickpea pasta</li>
+        <li>100g low sodium canned white beans</li>
+        <li>180ml Simple White Cashew Cream Sauce</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>2g dried thyme</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>10g fresh parsley to garnish</li>
+        <li>5ml extra virgin olive oil</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook Banza pasta in salted boiling water. Drain when done.</li>
+        <li>Heat olive oil in a small pan on medium. Add garlic and cook 30 seconds.</li>
+        <li>Add white beans and thyme. Stir 2 minutes. The beans should be warm and slightly softened.</li>
+        <li>Pour White Cashew Cream Sauce into the pan. Stir to combine and warm through — 2 minutes.</li>
+        <li>Add drained pasta to the sauce. Toss to coat. Season with salt and pepper.</li>
+        <li>Plate and garnish with fresh parsley and a drizzle of extra virgin olive oil.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~440 &nbsp;
+    Potassium: ~560mg &nbsp;
+    Sodium: ~300mg &nbsp;
+    Protein: ~22g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 6 — Fresh Salads and Cold Bowls</h2>
+    
+<article id="recipe-51" class="recipe">
+  <h2 class="recipe-title">Recipe 51: Mung Bean Sprout and Cucumber Salad</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Light and crunchy</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g mung bean sprouts</li>
+        <li>150g English cucumber</li>
+        <li>40g green onions</li>
+        <li>30g carrots</li>
+        <li>10g fresh cilantro</li>
+        <li>30ml Sesame-Ginger Dressing</li>
+        <li>3g sesame seeds</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine sprouts, cucumber, carrots, and green onions in a bowl.</li>
+        <li>Drizzle Sesame-Ginger Dressing over everything and toss gently.</li>
+        <li>Squeeze lime juice over the salad.</li>
+        <li>Top with cilantro and sesame seeds. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~130 &nbsp;
+    Potassium: ~310mg &nbsp;
+    Sodium: ~180mg &nbsp;
+    Protein: ~5g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-52" class="recipe">
+  <h2 class="recipe-title">Recipe 52: Simple Romaine Salad with Lemon Dressing</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Classic and refreshing</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>120g romaine lettuce</li>
+        <li>80g cherry tomatoes</li>
+        <li>75g English cucumber</li>
+        <li>40g red onion</li>
+        <li>40g avocado</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>1g dried oregano</li>
+        <li>10g fresh parsley to garnish</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Wash and dry romaine. Chop into bite-sized pieces.</li>
+        <li>Combine romaine, cherry tomatoes, cucumber, and red onion in a large bowl.</li>
+        <li>Drizzle dressing over everything and toss gently.</li>
+        <li>Arrange avocado slices on top — do not toss them in or they will break apart.</li>
+        <li>Sprinkle dried oregano and garnish with parsley.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~190 &nbsp;
+    Potassium: ~450mg &nbsp;
+    Sodium: ~120mg &nbsp;
+    Protein: ~3g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-53" class="recipe">
+  <h2 class="recipe-title">Recipe 53: Chickpea and Cherry Tomato Salad</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • High protein and fresh</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>126g WinCo low sodium garbanzo beans</li>
+        <li>160g cherry tomatoes</li>
+        <li>75g English cucumber</li>
+        <li>40g red onion</li>
+        <li>10g fresh parsley</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>1g dried oregano</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine chickpeas, cherry tomatoes, cucumber, and red onion in a bowl.</li>
+        <li>Add fresh parsley, oregano, and black pepper.</li>
+        <li>Drizzle Lemon and Olive Oil Dressing and fresh lemon juice over everything.</li>
+        <li>Toss gently to combine. Taste and adjust.</li>
+        <li>Serve immediately or refrigerate up to 24 hours.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~450mg &nbsp;
+    Sodium: ~160mg &nbsp;
+    Protein: ~12g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-54" class="recipe">
+  <h2 class="recipe-title">Recipe 54: Cold Soy Curl Salad Bowl</h2>
+  <p class="recipe-meta">Ready in 20 minutes • Chilled • Fresh and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>120g cooked Soy Curl Strips , cooled</li>
+        <li>80g romaine lettuce</li>
+        <li>75g green cabbage</li>
+        <li>75g carrots</li>
+        <li>75g mung bean sprouts</li>
+        <li>30ml Sesame-Ginger Dressing</li>
+        <li>20g green onions and 3g sesame seeds to garnish</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine romaine, cabbage, carrots, and sprouts in a large bowl.</li>
+        <li>Add cooled Soy Curl Strips on top.</li>
+        <li>Drizzle Sesame-Ginger Dressing over everything. Add lime juice.</li>
+        <li>Toss gently to combine without breaking up the Soy Curl Strips.</li>
+        <li>Top with green onions and sesame seeds. Serve immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~250 &nbsp;
+    Potassium: ~370mg &nbsp;
+    Sodium: ~320mg &nbsp;
+    Protein: ~14g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-55" class="recipe">
+  <h2 class="recipe-title">Recipe 55: Avocado and Black Bean Salad</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Fresh Mexican-inspired</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>75g ripe avocado</li>
+        <li>130g WinCo low sodium black beans</li>
+        <li>80g cherry tomatoes</li>
+        <li>40g frozen corn kernels</li>
+        <li>20g fresh cilantro</li>
+        <li>30ml fresh lime juice</li>
+        <li>2g cumin</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt and black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine black beans, cherry tomatoes, and corn in a bowl.</li>
+        <li>Add lime juice, cumin, garlic powder, salt, and pepper. Stir gently.</li>
+        <li>Add diced avocado. Fold in very gently — do not mash it.</li>
+        <li>Add cilantro and toss one final gentle time.</li>
+        <li>Serve immediately or refrigerate up to 2 hours.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~240 &nbsp;
+    Potassium: ~560mg &nbsp;
+    Sodium: ~170mg &nbsp;
+    Protein: ~8g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-56" class="recipe">
+  <h2 class="recipe-title">Recipe 56: Shredded Cabbage Slaw with Apple</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Crunchy and slightly sweet</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>200g green cabbage , finely shredded</li>
+        <li>120g apple , cored and julienned or diced</li>
+        <li>30g carrots</li>
+        <li>20g fresh parsley or cilantro</li>
+        <li>30ml Apple Cider Vinegar and Herb Dressing</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g black pepper</li>
+        <li>7ml maple syrup, honey, or agave</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Shred cabbage finely and place in a large bowl.</li>
+        <li>Core and julienne or dice the apple. Add to cabbage immediately and toss with lemon juice — this prevents browning.</li>
+        <li>Add shredded carrots and parsley or cilantro.</li>
+        <li>Pour Apple Cider Vinegar Dressing over everything along with sweetener and black pepper.</li>
+        <li>Toss well. Let sit 5 minutes before serving — the cabbage softens slightly and absorbs the dressing.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~150 &nbsp;
+    Potassium: ~340mg &nbsp;
+    Sodium: ~120mg &nbsp;
+    Protein: ~2g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-57" class="recipe">
+  <h2 class="recipe-title">Recipe 57: Rotisserie Chicken Salad with Avocado Mayo</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Classic comfort salad</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g Sprouts rotisserie chicken, skin removed and shredded</li>
+        <li>30g Simple Aquafaba Mayo</li>
+        <li>40g avocado</li>
+        <li>50g celery</li>
+        <li>20g green onions</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g garlic powder</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>Romaine leaves or whole wheat toast to serve</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Shred chicken and remove all skin. Place in a bowl.</li>
+        <li>Add diced avocado, celery, and green onion.</li>
+        <li>In a small bowl mix Aquafaba Mayo, lemon juice, garlic powder, salt, and pepper.</li>
+        <li>Add the mayo mixture to the chicken bowl and stir gently to combine.</li>
+        <li>Taste and adjust. Serve on romaine lettuce leaves or on whole wheat toast.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~260 &nbsp;
+    Potassium: ~430mg &nbsp;
+    Sodium: ~310mg &nbsp;
+    Protein: ~24g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-58" class="recipe">
+  <h2 class="recipe-title">Recipe 58: Cucumber, Tomato and Herb Salad</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Refreshing summer salad</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>300g English cucumber</li>
+        <li>160g cherry tomatoes</li>
+        <li>40g red onion , very thinly sliced</li>
+        <li>15g fresh parsley</li>
+        <li>10g fresh basil</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g dried oregano</li>
+        <li>1g black pepper</li>
+        <li>1g fine sea salt</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Dice cucumber. Halve cherry tomatoes. Slice red onion as thin as possible.</li>
+        <li>Combine everything in a bowl.</li>
+        <li>Add fresh parsley, basil, oregano, salt, and pepper.</li>
+        <li>Pour Lemon and Olive Oil Dressing over everything and toss.</li>
+        <li>Squeeze fresh lemon juice over the top. Let sit 5 minutes before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~150 &nbsp;
+    Potassium: ~470mg &nbsp;
+    Sodium: ~120mg &nbsp;
+    Protein: ~3g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-59" class="recipe">
+  <h2 class="recipe-title">Recipe 59: Cold Sesame Noodle Salad</h2>
+  <p class="recipe-meta">Ready in 20 minutes • Cook noodles then cool • Great for warm days</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>85g dry rice noodles or thin wheat noodles</li>
+        <li>100g green cabbage</li>
+        <li>75g carrots</li>
+        <li>75g mung bean sprouts</li>
+        <li>40g green onions</li>
+        <li>45ml Sesame-Ginger Dressing</li>
+        <li>3g sesame seeds</li>
+        <li>10g fresh cilantro</li>
+        <li>15ml fresh lime juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cook noodles per package. Drain and rinse under cold water. Toss with 5ml sesame oil.</li>
+        <li>Combine chilled noodles with cabbage, carrots, and sprouts in a large bowl.</li>
+        <li>Pour Sesame-Ginger Dressing over everything and toss well.</li>
+        <li>Top with green onions, sesame seeds, and cilantro. Squeeze lime juice over everything.</li>
+        <li>Serve immediately or refrigerate up to 4 hours.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~340 &nbsp;
+    Potassium: ~360mg &nbsp;
+    Sodium: ~300mg &nbsp;
+    Protein: ~7g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-60" class="recipe">
+  <h2 class="recipe-title">Recipe 60: Mediterranean White Bean Salad</h2>
+  <p class="recipe-meta">Ready in 10 minutes • No cooking • Simple and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>100g low sodium canned white beans</li>
+        <li>80g cherry tomatoes</li>
+        <li>75g English cucumber</li>
+        <li>20g fresh parsley</li>
+        <li>10g fresh basil</li>
+        <li>30ml Lemon and Olive Oil Dressing</li>
+        <li>1g dried oregano</li>
+        <li>1g black pepper</li>
+        <li>15ml fresh lemon juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Drain and rinse white beans very well.</li>
+        <li>Combine beans, cherry tomatoes, cucumber, parsley, and basil in a bowl.</li>
+        <li>Add oregano and black pepper.</li>
+        <li>Pour Lemon and Olive Oil Dressing and fresh lemon juice over everything. Toss gently.</li>
+        <li>Let sit 10 minutes before serving for best flavor.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~240 &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~130mg &nbsp;
+    Protein: ~9g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+  <section>
+    <h2 class="section-heading">Section 7 — Snacks and Desserts</h2>
+    
+<article id="recipe-61" class="recipe">
+  <h2 class="recipe-title">Recipe 61: Peanut Butter and Apple Slices with Cinnamon</h2>
+  <p class="recipe-meta">Ready in 3 minutes • No cooking • Simple satisfying snack</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g apple , cored and sliced</li>
+        <li>30g natural peanut butter, no added salt or sugar</li>
+        <li>1g cinnamon</li>
+        <li>7ml maple syrup, honey, or agave — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Core and slice the apple into wedges.</li>
+        <li>Place peanut butter in a small bowl. Dust cinnamon on top.</li>
+        <li>Arrange apple slices on a plate alongside the peanut butter bowl.</li>
+        <li>Dip and enjoy. Add a drizzle of sweetener if desired.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~350mg &nbsp;
+    Sodium: ~5mg &nbsp;
+    Protein: ~8g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-62" class="recipe">
+  <h2 class="recipe-title">Recipe 62: Avocado Toast on Whole Wheat</h2>
+  <p class="recipe-meta">Ready in 5 minutes • No cooking beyond toasting • Satisfying any time</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>1 slice whole wheat bread — look for under 140mg sodium per slice</li>
+        <li>40g ripe avocado</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>1g smoked paprika</li>
+        <li>30g cherry tomatoes</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Toast the bread.</li>
+        <li>Scoop avocado into a small bowl. Add lemon juice, garlic powder, salt, and pepper. Mash with a fork until creamy but not completely smooth.</li>
+        <li>Spread mashed avocado on the toast.</li>
+        <li>Dust smoked paprika on top. Add cherry tomatoes if using.</li>
+        <li>Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~210 &nbsp;
+    Potassium: ~340mg &nbsp;
+    Sodium: ~160mg &nbsp;
+    Protein: ~5g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-63" class="recipe">
+  <h2 class="recipe-title">Recipe 63: Oat and Peanut Butter Energy Bites</h2>
+  <p class="recipe-meta">Ready in 15 minutes plus 30 min chill • No baking • Make a batch for the week</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>90g rolled oats</li>
+        <li>120g natural peanut butter, no added salt or sugar</li>
+        <li>45ml maple syrup, honey, or agave</li>
+        <li>40g ground flaxseed</li>
+        <li>1g cinnamon</li>
+        <li>3ml vanilla extract — optional</li>
+        <li>20g mini chocolate chips or raisins — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients in a bowl. Stir well until evenly mixed. The mixture should hold together when pressed — if too dry add 15ml more sweetener.</li>
+        <li>Refrigerate the mixture 20 minutes — chilling makes it easier to roll.</li>
+        <li>Roll into balls about the size of a large marble — roughly 15g each.</li>
+        <li>Place on parchment-lined sheet. Refrigerate 30 minutes until firm.</li>
+        <li>Store in an airtight container in the fridge up to 1 week. Makes about 16 bites.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~120 per bite — eat 2 to 3 bites per sitting &nbsp;
+    Potassium: ~120mg per bite &nbsp;
+    Sodium: ~5mg per bite &nbsp;
+    Protein: ~4g per bite
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-64" class="recipe">
+  <h2 class="recipe-title">Recipe 64: Frozen Banana Nice Cream</h2>
+  <p class="recipe-meta">Ready in 5 minutes plus overnight freeze • Blender only • Tastes like ice cream</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>60g frozen banana</li>
+        <li>60ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>15g natural peanut butter or almond butter</li>
+        <li>1g cinnamon</li>
+        <li>3ml vanilla extract — optional</li>
+        <li>8g unsweetened cocoa powder — optional for chocolate version</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Remove frozen banana from freezer. Let sit 3 minutes to soften very slightly.</li>
+        <li>Break into chunks. Add to Ninja blender small cup with soy beverage, nut butter, and cinnamon.</li>
+        <li>Blend 20 to 25 seconds until smooth and creamy. Scrape sides if needed and blend 10 more seconds.</li>
+        <li>Eat immediately for soft-serve texture. For firmer texture pour into a small container and freeze 30 more minutes.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~220 &nbsp;
+    Potassium: ~380mg &nbsp;
+    Sodium: ~60mg &nbsp;
+    Protein: ~7g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-65" class="recipe">
+  <h2 class="recipe-title">Recipe 65: Avocado Chocolate Mousse</h2>
+  <p class="recipe-meta">Ready in 5 minutes • Blender only • 4 ingredients</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>75g ripe avocado</li>
+        <li>15g unsweetened cocoa powder</li>
+        <li>30ml maple syrup, honey, or agave</li>
+        <li>60ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>3ml vanilla extract</li>
+        <li>1g fine sea salt</li>
+        <li>15g natural peanut butter — optional for extra richness</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to your Ninja blender small cup.</li>
+        <li>Blend 25 to 30 seconds until completely smooth and silky. Scrape sides and blend 10 more seconds.</li>
+        <li>Taste — it should be rich, chocolatey, and just sweet enough. Add more sweetener if needed.</li>
+        <li>Pour into a small bowl or cup. Eat immediately or refrigerate up to 4 hours.</li>
+        <li>Top with a few fresh berries for color and freshness if desired.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~270 &nbsp;
+    Potassium: ~430mg &nbsp;
+    Sodium: ~50mg &nbsp;
+    Protein: ~5g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-66" class="recipe">
+  <h2 class="recipe-title">Recipe 66: Chia Pudding with Berry Topping</h2>
+  <p class="recipe-meta">Make the night before • No cooking • Ready to eat in the morning</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>30g chia seeds</li>
+        <li>240ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>3ml vanilla extract</li>
+        <li>1g cinnamon</li>
+        <li>75g fresh or frozen-then-thawed berries — blueberries or strawberries</li>
+        <li>15g natural peanut butter or almond butter — optional, stirred in before serving</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine chia seeds, soy beverage, sweetener, vanilla, and cinnamon in a jar or bowl. Stir very well — make sure no chia seeds are clumped together.</li>
+        <li>Stir again 5 minutes later to break up any clumps that have formed.</li>
+        <li>Cover and refrigerate overnight or at least 6 hours.</li>
+        <li>In the morning stir the pudding — it should be thick like creamy porridge. If too thick add 30ml more soy beverage.</li>
+        <li>Top with berries and nut butter if using. Eat cold.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~290 &nbsp;
+    Potassium: ~380mg &nbsp;
+    Sodium: ~85mg &nbsp;
+    Protein: ~12g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-67" class="recipe">
+  <h2 class="recipe-title">Recipe 67: Rice Cake with Almond Butter and Strawberries</h2>
+  <p class="recipe-meta">Ready in 3 minutes • No cooking • Light and satisfying</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>2 plain unsalted rice cakes</li>
+        <li>30g almond butter</li>
+        <li>75g fresh strawberries</li>
+        <li>1g cinnamon</li>
+        <li>7ml maple syrup, honey, or agave — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Lay rice cakes on a plate.</li>
+        <li>Spread 15g almond butter on each rice cake.</li>
+        <li>Arrange strawberry slices on top.</li>
+        <li>Dust cinnamon over everything.</li>
+        <li>Add a tiny drizzle of sweetener if desired. Eat immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~240 &nbsp;
+    Potassium: ~320mg &nbsp;
+    Sodium: ~30mg &nbsp;
+    Protein: ~7g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-68" class="recipe">
+  <h2 class="recipe-title">Recipe 68: Simple Trail Mix</h2>
+  <p class="recipe-meta">Ready in 2 minutes • No cooking • Keep a jar ready all week</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>18g raw almonds</li>
+        <li>18g raw walnuts</li>
+        <li>10g pumpkin seeds</li>
+        <li>10g sunflower seeds</li>
+        <li>15g raisins or dried cranberries, no added sugar</li>
+        <li>10g mini chocolate chips — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Weigh or measure all ingredients into a small bowl.</li>
+        <li>Mix gently to combine.</li>
+        <li>Eat immediately or store in a small sealed jar.</li>
+        <li>To make a week's supply: multiply all amounts by 7 and store in a larger jar.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 &nbsp;
+    Potassium: ~320mg &nbsp;
+    Sodium: ~5mg &nbsp;
+    Protein: ~8g
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-69" class="recipe">
+  <h2 class="recipe-title">Recipe 69: Blended Fruit and Soy Milk Smoothie</h2>
+  <p class="recipe-meta">Ready in 5 minutes • Blender only • Refreshing and nutritious</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g frozen mixed berries — strawberries and blueberries</li>
+        <li>240ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>60g frozen banana — optional for extra creaminess</li>
+        <li>15g natural almond or peanut butter</li>
+        <li>1g cinnamon</li>
+        <li>30g unflavored protein powder — optional for extra protein</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to your Ninja blender.</li>
+        <li>Blend 25 to 30 seconds until completely smooth.</li>
+        <li>Taste — add 7ml sweetener if you want it slightly sweeter.</li>
+        <li>Pour into a glass and drink immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~280 without protein powder &nbsp;
+    Potassium: ~480mg &nbsp;
+    Sodium: ~75mg &nbsp;
+    Protein: ~10g without protein powder
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+
+<article id="recipe-70" class="recipe">
+  <h2 class="recipe-title">Recipe 70: Warm Cinnamon Oat Bites</h2>
+  <p class="recipe-meta">Ready in 25 minutes • Oven • Makes about 16 bites — eat 3 per serving</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>135g rolled oats</li>
+        <li>90g ripe banana</li>
+        <li>45g natural peanut butter or almond butter</li>
+        <li>30ml maple syrup, honey, or agave</li>
+        <li>3g cinnamon</li>
+        <li>3ml vanilla extract</li>
+        <li>1g fine sea salt</li>
+        <li>20g mini chocolate chips or raisins — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Preheat oven to 175 degrees C (350 degrees F). Line a baking sheet with parchment.</li>
+        <li>Mash banana completely smooth in a large bowl.</li>
+        <li>Add peanut butter, sweetener, cinnamon, vanilla, and salt. Stir well.</li>
+        <li>Add rolled oats and mix until everything is combined. Fold in chocolate chips or raisins if using.</li>
+        <li>Scoop 15g portions onto the baking sheet. Press each one slightly flat into a round shape.</li>
+        <li>Bake 12 to 14 minutes until edges are golden and centers are set. They firm up as they cool.</li>
+        <li>Cool 10 minutes on the pan before eating.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="nutrition">
+    <strong>Nutrition per serving:</strong>
+    Calories: ~110 per bite — eat 3 bites per sitting for 330 calories &nbsp;
+    Potassium: ~180mg per 3 bites &nbsp;
+    Sodium: ~25mg per 3 bites &nbsp;
+    Protein: ~8g per 3 bites
+  </div>
+  <p class="servings-meta">Servings: 1</p>
+</article>
+  </section>
+
+<section>
+  <h2 class="section-heading">Sauces, Dressings, and Spice Blends</h2>
+  
+<article id="sauce-1" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 1: Simple Lemon and Olive Oil Dressing</h2>
+  <p class="recipe-meta">Quick Dressing — 2 Minutes — Ready in 2 minutes • No cooking • Keeps 5 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45ml fresh lemon juice</li>
+        <li>45ml extra virgin olive oil</li>
+        <li>4g garlic</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>1g dried oregano — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to a small mason jar.</li>
+        <li>Seal tightly and shake vigorously for 10 seconds.</li>
+        <li>Taste — add more lemon for brightness or more olive oil if too sharp.</li>
+        <li>Refrigerate up to 5 days. Shake before each use.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-2" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 2: Tahini-Lemon Dressing</h2>
+  <p class="recipe-meta">Quick Dressing — 3 Minutes — Ready in 3 minutes • No cooking • Keeps 1 week in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>30g tahini</li>
+        <li>30ml fresh lemon juice</li>
+        <li>15ml apple cider vinegar</li>
+        <li>4g garlic</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>1g black pepper</li>
+        <li>45 to 60ml water — add until pourable</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients except water in a small jar or bowl.</li>
+        <li>Stir or whisk until smooth — tahini will seize then loosen. Keep stirring.</li>
+        <li>Add water 15ml at a time, stirring after each, until the dressing pours easily.</li>
+        <li>Taste and adjust lemon. Refrigerate up to 7 days. Stir before use.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-3" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 3: Sesame-Ginger Dressing</h2>
+  <p class="recipe-meta">Quick Dressing — 3 Minutes — Ready in 3 minutes • No cooking • Keeps 1 week</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>30ml rice vinegar, unseasoned</li>
+        <li>15ml sesame oil</li>
+        <li>15ml maple syrup or honey</li>
+        <li>5g fresh ginger</li>
+        <li>4g garlic</li>
+        <li>3g sesame seeds</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients in a small jar.</li>
+        <li>Shake or stir vigorously to combine.</li>
+        <li>Taste — savory, slightly sweet, with fresh ginger warmth.</li>
+        <li>Refrigerate up to 7 days. Shake before use.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-4" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 4: Creamy Avocado Dressing</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 3 Minutes — Ready in 3 minutes • Blender • Make same day only</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>75g ripe avocado</li>
+        <li>30ml fresh lime juice</li>
+        <li>30ml water</li>
+        <li>4g garlic</li>
+        <li>1g fine sea salt</li>
+        <li>1g cumin</li>
+        <li>10g fresh cilantro — optional</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to your Ninja blender.</li>
+        <li>Blend until completely smooth, about 20 seconds.</li>
+        <li>Add more water 15ml at a time if too thick to pour.</li>
+        <li>Use immediately — avocado browns quickly. Make only what you use today.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-5" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 5: Apple Cider Vinegar and Herb Dressing</h2>
+  <p class="recipe-meta">Quick Dressing — 2 Minutes — Ready in 2 minutes • No cooking • Keeps 5 days</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45ml apple cider vinegar</li>
+        <li>30ml extra virgin olive oil</li>
+        <li>2g dried basil</li>
+        <li>1g dried oregano</li>
+        <li>2g garlic powder</li>
+        <li>1g onion powder</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>7ml maple syrup, honey, or agave</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to a small jar.</li>
+        <li>Seal tightly and shake 10 seconds.</li>
+        <li>Taste — add more sweetener to balance if too sharp.</li>
+        <li>Refrigerate up to 5 days. Shake before use.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-6" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 6: Peanut Dressing</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 5 Minutes — Ready in 5 minutes • No cooking • Keeps 5 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45g natural peanut butter, no added salt or sugar</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>30ml rice vinegar</li>
+        <li>15ml fresh lime juice</li>
+        <li>15ml maple syrup, honey, or agave</li>
+        <li>5g fresh ginger</li>
+        <li>4g garlic</li>
+        <li>45 to 60ml warm water to thin</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients except water in a bowl and stir vigorously until smooth.</li>
+        <li>Add warm water 15ml at a time, stirring until the dressing pours easily.</li>
+        <li>Taste — savory, tangy, slightly sweet, with fresh ginger warmth.</li>
+        <li>Refrigerate up to 5 days. Stir in a little warm water to loosen when cold.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-7" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 7: Simple Tomato Sauce</h2>
+  <p class="recipe-meta">Warm Sauce — 20 Minutes — Ready in 20 minutes • Stovetop • Keeps 5 days in fridge or freeze</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>400g WinCo crushed tomatoes</li>
+        <li>60g yellow onion</li>
+        <li>8g garlic</li>
+        <li>15ml light olive oil</li>
+        <li>2g dried basil</li>
+        <li>2g dried oregano</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>7ml maple syrup, honey, or agave</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat olive oil in a medium saucepan on medium heat.</li>
+        <li>Add onion and cook 5 minutes until soft. Add garlic and stir 30 seconds.</li>
+        <li>Add crushed tomatoes, basil, oregano, salt, pepper, and sweetener. Stir well.</li>
+        <li>Reduce heat to low and simmer 12 to 15 minutes, stirring occasionally.</li>
+        <li>Taste and adjust. Use immediately or store in a sealed jar.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-8" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 8: Ginger-Miso Citrus Sauce</h2>
+  <p class="recipe-meta">Warm Sauce — 15 Minutes — Ready in 15 minutes • Blender • Keeps 7 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>30g white miso paste — Hikari Organic Mild Sodium</li>
+        <li>45ml fresh lime juice</li>
+        <li>30ml rice vinegar</li>
+        <li>15g fresh ginger</li>
+        <li>4g garlic</li>
+        <li>15ml maple syrup, honey, or agave</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>30ml water to thin</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add garlic and rice vinegar to your Ninja blender. Blend 15 seconds — this mellows the garlic.</li>
+        <li>Add all remaining ingredients.</li>
+        <li>Blend 20 seconds until completely smooth.</li>
+        <li>Taste — should be bright, gingery, and slightly sweet. Add more lime if needed.</li>
+        <li>Pour into a small mason jar. Refrigerate up to 7 days. Shake before use.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-9" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 9: Simple Brown Gravy</h2>
+  <p class="recipe-meta">Warm Sauce — 10 Minutes — Ready in 10 minutes • Stovetop • Keeps 3 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>240ml Pacific Foods Low Sodium Vegetable Broth</li>
+        <li>15ml Bragg Liquid Aminos</li>
+        <li>8g cornstarch</li>
+        <li>1g garlic powder</li>
+        <li>1g onion powder</li>
+        <li>1g black pepper</li>
+        <li>3ml sesame oil</li>
+        <li>1g fine sea salt to taste</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>In a small cup mix cornstarch with 30ml of the cold broth until completely smooth with no lumps. Set aside.</li>
+        <li>Pour remaining broth into a small saucepan on medium heat. Add Bragg, garlic powder, onion powder, and pepper. Bring to a gentle simmer.</li>
+        <li>Pour cornstarch mixture into the simmering broth while stirring constantly. The gravy thickens within 60 seconds.</li>
+        <li>Remove from heat. Stir in sesame oil. Taste and add a pinch of salt if needed.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-10" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 10: Simple White Cashew Cream Sauce</h2>
+  <p class="recipe-meta">Warm Sauce — 15 Minutes — Ready in 15 minutes plus 20 min soak • Blender and stovetop • Keeps 4 days</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>75g raw cashews — soaked 20 minutes in boiling water then drained</li>
+        <li>240ml Trader Joe's Unsweetened Soy Beverage , warmed — 25mg sodium per 240ml</li>
+        <li>8g nutritional yeast</li>
+        <li>2g garlic powder</li>
+        <li>2g fine sea salt</li>
+        <li>1g white pepper</li>
+        <li>5ml fresh lemon juice</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Cover cashews with boiling water and soak 20 minutes. Drain and rinse.</li>
+        <li>Warm soy beverage until steaming but not boiling.</li>
+        <li>Add soaked cashews and warm soy beverage to your Ninja blender. Blend on high 45 seconds until completely smooth.</li>
+        <li>Pour into a small saucepan on medium-low heat. Add nutritional yeast, garlic powder, salt, white pepper, and lemon juice.</li>
+        <li>Stir constantly for 3 to 4 minutes until slightly thickened. Use immediately or store in fridge up to 4 days.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-11" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 11: Guajillo-Style Mild Red Sauce</h2>
+  <p class="recipe-meta">Warm Sauce — 25 Minutes — Ready in 25 minutes • Stovetop and blender • Keeps 5 days or freeze</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>56g dried guajillo or ancho chilis</li>
+        <li>480ml boiling water for soaking</li>
+        <li>8g garlic</li>
+        <li>4g cumin</li>
+        <li>2g dried oregano</li>
+        <li>2g fine sea salt</li>
+        <li>1g black pepper</li>
+        <li>5ml apple cider vinegar</li>
+        <li>7ml maple syrup, honey, or agave</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Heat a dry skillet on medium-high. Toast chilis one at a time, pressing flat for 15 seconds per side until fragrant. Do not let them turn black.</li>
+        <li>Remove stems and most seeds. Place in a bowl and cover with boiling water. Soak 20 minutes.</li>
+        <li>Toast garlic cloves in the same dry skillet until slightly charred. Peel when cool.</li>
+        <li>Transfer soaked chilis plus 120ml of their soaking water to your Ninja blender. Add garlic, cumin, oregano, salt, pepper, vinegar, and sweetener.</li>
+        <li>Blend 45 seconds until completely smooth. Strain through a fine mesh strainer for a silky texture.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-12" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 12: Simple Teriyaki Glaze</h2>
+  <p class="recipe-meta">Warm Sauce — 10 Minutes — Ready in 10 minutes • Stovetop • Keeps 2 weeks in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45ml Bragg Liquid Aminos</li>
+        <li>30ml maple syrup, honey, or agave</li>
+        <li>15ml rice vinegar</li>
+        <li>5g fresh ginger</li>
+        <li>4g garlic</li>
+        <li>8g cornstarch mixed with 15ml cold water</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine Bragg, sweetener, rice vinegar, ginger, and garlic in a small saucepan on medium heat.</li>
+        <li>Bring to a gentle simmer, stirring occasionally.</li>
+        <li>Stir cornstarch mixture until smooth then pour into the simmering sauce while stirring.</li>
+        <li>Cook 1 to 2 minutes until the glaze thickens and becomes glossy. Remove from heat.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-13" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 13: Peanut Dipping Sauce</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 5 Minutes — Ready in 5 minutes • No cooking • Keeps 5 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45g natural peanut butter</li>
+        <li>30ml Bragg Liquid Aminos</li>
+        <li>15ml fresh lime juice</li>
+        <li>15ml rice vinegar</li>
+        <li>7ml maple syrup, honey, or agave</li>
+        <li>3g fresh ginger</li>
+        <li>45ml warm water to thin</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients except water in a small bowl. Stir vigorously.</li>
+        <li>Add warm water 15ml at a time until dipping consistency.</li>
+        <li>Taste and adjust — should be thick enough to cling to a spring roll or wrap.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-14" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 14: Simple Chipotle-Style Sauce</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 5 Minutes — Ready in 5 minutes • No cooking • Keeps 5 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>60g Simple Aquafaba Mayo</li>
+        <li>1 canned chipotle pepper in adobo sauce, finely minced — OR use 2g smoked paprika for a completely mild version</li>
+        <li>5ml fresh lime juice</li>
+        <li>1g garlic powder</li>
+        <li>1g fine sea salt</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>If using canned chipotle, rinse it under water to reduce heat then mince very fine.</li>
+        <li>Stir all ingredients together until combined.</li>
+        <li>Taste — add more lime for brightness or more mayo to mellow the heat.</li>
+        <li>Refrigerate in a small container up to 5 days.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-15" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 15: Garlic and Herb Drizzle</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 2 Minutes — Ready in 2 minutes • No cooking • Use same day</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>45ml extra virgin olive oil</li>
+        <li>4g garlic</li>
+        <li>8g fresh parsley or basil</li>
+        <li>15ml fresh lemon juice</li>
+        <li>1g fine sea salt</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all ingredients in a small bowl and stir.</li>
+        <li>Let sit 5 minutes so the garlic mellows into the oil.</li>
+        <li>Drizzle over pasta, vegetables, or grain bowls just before serving.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-16" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 16: Simple Salsa Fresca</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 10 Minutes — Ready in 10 minutes • No cooking • Keeps 2 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>200g tomatoes</li>
+        <li>40g white onion</li>
+        <li>15ml fresh lime juice</li>
+        <li>10g fresh cilantro</li>
+        <li>1/2 small jalapeño, seeds removed, skip for no heat</li>
+        <li>1g fine sea salt</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Dice tomatoes and let sit in a colander 5 minutes to drain excess liquid.</li>
+        <li>Combine drained tomatoes, onion, lime juice, cilantro, jalapeño if using, and salt in a bowl.</li>
+        <li>Stir gently and taste. Adjust lime or salt.</li>
+        <li>Let sit 5 minutes before serving so flavors come together.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-17" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 17: Avocado Crema</h2>
+  <p class="recipe-meta">Quick Finishing Sauce — 5 Minutes — Ready in 5 minutes • Blender • Make same day only</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>150g ripe avocado</li>
+        <li>45ml Trader Joe's Unsweetened Soy Beverage</li>
+        <li>30ml fresh lime juice</li>
+        <li>4g garlic</li>
+        <li>1g fine sea salt</li>
+        <li>1g cumin</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Add all ingredients to your Ninja blender.</li>
+        <li>Blend 20 to 25 seconds until completely smooth and creamy.</li>
+        <li>Taste and add more lime or salt as needed.</li>
+        <li>Drizzle over tacos, bowls, or use as a dip. Use within a few hours.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-18" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 18: Simple Aquafaba Mayo</h2>
+  <p class="recipe-meta">Quick Sauce — 10 Minutes — Ready in 10 minutes • Blender • Keeps 7 days in fridge</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>90ml aquafaba — liquid from one 425g can of WinCo low sodium chickpeas</li>
+        <li>240ml WinCo Extra Light Tasting Olive Oil</li>
+        <li>15ml fresh lemon juice</li>
+        <li>10ml apple cider vinegar</li>
+        <li>8g Dijon mustard</li>
+        <li>1g fine sea salt</li>
+        <li>1g white pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Let the aquafaba sit out 20 minutes to reach room temperature. Cold aquafaba will not emulsify.</li>
+        <li>Add aquafaba, lemon juice, vinegar, mustard, salt, and white pepper to your Ninja blender. Blend 20 seconds.</li>
+        <li>With the blender running on medium speed add the oil in the absolute thinnest stream possible — like a thread not a pour. Take 60 to 90 seconds to add the first half.</li>
+        <li>Once the mixture turns white and thick add remaining oil more quickly while still blending.</li>
+        <li>Finished mayo should be thick, glossy, and creamy. Pour into a jar and refrigerate immediately.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-19" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 19: Fajita Seasoning Blend</h2>
+  <p class="recipe-meta">Spice Blend — Mix Once, Use for Months — Takes 2 minutes to mix • Store in a small jar • No cooking</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>6g cumin</li>
+        <li>4g smoked paprika</li>
+        <li>3g chili powder</li>
+        <li>3g garlic powder</li>
+        <li>3g onion powder</li>
+        <li>2g dried oregano</li>
+        <li>2g black pepper</li>
+        <li>1g fine sea salt</li>
+        <li>1g cinnamon</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Combine all spices in a small bowl and stir until evenly mixed.</li>
+        <li>Pour into a small jar. Label with the date.</li>
+        <li>To use: add 4 to 5g (1.5 to 2 teaspoons) per serving of protein or vegetables.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-20" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 20: All-Purpose Salt-Free Herb Seasoning</h2>
+  <p class="recipe-meta">Spice Blend — Mix Once, Use for Months — Takes 2 minutes to mix • Store in a jar • Sodium-free</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>6g garlic powder</li>
+        <li>6g onion powder</li>
+        <li>4g dried basil</li>
+        <li>3g dried oregano</li>
+        <li>3g dried thyme</li>
+        <li>2g smoked paprika</li>
+        <li>2g black pepper</li>
+        <li>2g dried parsley</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Mix all spices together in a small bowl.</li>
+        <li>Pour into a labeled jar.</li>
+        <li>Use 3 to 4g (1 teaspoon) per serving wherever you want flavor without adding sodium.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-21" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 21: Chik-Style Broth Blend</h2>
+  <p class="recipe-meta">Spice Blend — Mix Once, Use for Weeks — Takes 5 minutes • Uses Butler Chik-Style Seasoning as the base</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>9g Butler Chik-Style Seasoning</li>
+        <li>3g garlic powder</li>
+        <li>3g onion powder</li>
+        <li>2g dried thyme</li>
+        <li>2g turmeric</li>
+        <li>1g black pepper</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Mix all ingredients together in a small bowl.</li>
+        <li>Store in a labeled jar.</li>
+        <li>To make a quick broth: add 5g of this blend per 240ml of hot water and stir.</li>
+        <li>To season Soy Curls: rehydrate Soy Curls in this broth for 10 minutes for maximum flavor absorption.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+
+<article id="sauce-22" class="recipe sauce">
+  <h2 class="recipe-title">Sauce 22: Warm Spice Blend for Soups and Stews</h2>
+  <p class="recipe-meta">Spice Blend — Mix Once, Use for Months — Takes 2 minutes • Store in a jar • Used across soup recipes</p>
+  <div class="recipe-body">
+    <div class="ingredients-block">
+      <h3>Ingredients</h3>
+      <ul class="ingredients">
+        <li>6g cumin</li>
+        <li>4g smoked paprika</li>
+        <li>3g ground coriander</li>
+        <li>3g garlic powder</li>
+        <li>3g turmeric</li>
+        <li>2g black pepper</li>
+        <li>1g cinnamon</li>
+      </ul>
+    </div>
+    <div class="instructions-block">
+      <h3>Instructions</h3>
+      <ol class="steps">
+        <li>Mix all spices in a small bowl.</li>
+        <li>Transfer to a labeled spice jar.</li>
+        <li>Use 4 to 5g (1.5 to 2 teaspoons) per pot of soup or stew.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="servings-meta">Servings: 4</p>
+</article>
+</section>
+
+</body>
+</html>
